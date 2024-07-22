@@ -68,7 +68,7 @@ const VerificationModel = ({ className, verifyEmailModal, otpErrState, handleCod
     {/* <p className='text-black'>
       <span>{min}:</span><span>{ `${sec < 10 ? `0${sec}` : `${sec}`}` }</span>
     </p> */}
-      <h2 className='mt-5 text-black text-center text-xl font-bold'>Let’s verify your email address</h2>
+      <h2 className='mt-5 text-black text-center text-xl font-bold'>Let&apos;s verify your email address</h2>
       <p className='my-3 text-center text-[#858585]'>
         We just sent an OTP to qubigs 101@gmail.com. Proceed to type in the OTP to confirm your account.
       </p>
@@ -80,7 +80,7 @@ const VerificationModel = ({ className, verifyEmailModal, otpErrState, handleCod
           <input type='text' name='code-4' className={`${ otpErrState === true ? "border border-solid border-[#ED0F0F]" : ""} w-14 h-14 bg-[#E8EDE9] outline-none rounded-md text-center font-bold text-black`} maxLength={1} onChange={(e)=>{handleCode4(e)}} />
           <input type='text' name='code-5' className={`${ otpErrState === true ? "border border-solid border-[#ED0F0F]" : ""} w-14 h-14 bg-[#E8EDE9] outline-none rounded-md text-center font-bold text-black`} maxLength={1} onChange={(e)=>{handleCode5(e)}} />
         </div>
-        <p className='text-[#858585] my-2'>You haven't received OTP yet? <span className='text-[#0B7E78] font-bold'><span>{min}:</span><span>{ `${sec < 10 ? `0${sec}` : `${sec}`}` }</span></span></p>
+        <p className='text-[#858585] my-2'>You haven&apos;t received OTP yet? <span className='text-[#0B7E78] font-bold'><span>{min}:</span><span>{ `${sec < 10 ? `0${sec}` : `${sec}`}` }</span></span></p>
         <Button className='bg-[#0B7E78] w-full hover:bg-[#0B7E7*] my-5' onClick={(e)=>{handleConfirmEmail(e)}}>Confirm account</Button>
       </form>
     </div>

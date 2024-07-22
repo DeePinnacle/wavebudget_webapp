@@ -72,7 +72,7 @@ const VerifyKYC = () => {
           </div>
           <div className="mt-14">
             {kycsteps.map((steps, index) => (
-              <div className="w-full min-h-5 my-3 flex flex-row gap-3">
+              <div key={ index } className="w-full min-h-5 my-3 flex flex-row gap-3">
                 {<steps.icon className={"w-10 h-10 font-bold"} />}
                 <div>
                   <h2 className="mt-2 font-bold text-lg">{steps.title}</h2>

@@ -171,7 +171,7 @@ const LoginForm = () => {
         <EyeIcon className={"absolute top-[180px] right-8 w-7 h-7"} />
 
         <p className="text-sm text-right">
-          Can't remember password?{" "}
+          Can&apos;t remember password?{" "}
           <span className="font-bold text-[#0B7E78]">
             <Link href={"/recover-password"}>Forgot password</Link>
           </span>
@@ -188,7 +188,7 @@ const LoginForm = () => {
         </Button>
         <p className="text-center my-4">
           <span className="text-[#858585] my-2">
-            Don't have an account yet?{" "}
+            Don&apos;t have an account yet?{" "}
           </span>
           <Link href="/register" className="text-[#0B7E78] font-bold">
             Create account
