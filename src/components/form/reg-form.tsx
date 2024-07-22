@@ -227,7 +227,7 @@ const RegForm = () => {
   },[logoModal])
 
   return (
-    <div className='box-border'>
+    <div className='box-border bg-red-500'>
       <div className={`${ errorDiv === true ? "block":"hidden"}`}>        
         <div className='absolute -top-28 left-16 bg-[#FFEEEE] w-2/3 px-3 py-4 rounded-xl flex flex-row items-center gap-4'>
           <InvalidIcon className="w-5 h-5" />
