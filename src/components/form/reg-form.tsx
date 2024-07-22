@@ -247,13 +247,13 @@ const RegForm = () => {
             <UserIcon className={`absolute top-[70px] left-6 w-7 h-7`} />
             <input type='text' value={ formData.firstname } name='firstname' className={`${firstnameErrBorder === true ? "border border-solid border-[#ED0F0F]":"" } w-full text-lg my-2 py-3 px-2 rounded-md border border-solid border-[#DBE1E1] placeholder:pl-10 placeholder:text-sm outline-none`} placeholder='Enter firstname' onChange={(e)=>{ handleOnChange(e)}} />
 
-            <label htmlFor='middlename' className='text-[#858585] text-xl font-semibold'>MiddleName</label>
+          { /*  <label htmlFor='middlename' className='text-[#858585] text-xl font-semibold'>MiddleName</label>
             <UserIcon className={`absolute top-[170px] left-6 w-7 h-7`} />
             <input type='text' value={ formData.middlename } name='middlename' className={`${middlenameErrBorder === true ? "border border-solid border-[#ED0F0F]":"" } w-full text-lg my-2 py-3 px-2 rounded-md border border-solid border-[#DBE1E1] placeholder:pl-10 placeholder:text-sm outline-none`} placeholder='Enter middlename' onChange={(e)=>{ handleOnChange(e)}} />
             
             <label htmlFor='lastname' className='text-[#858585] text-xl font-semibold'>Lastname</label>
             <UserIcon className={`absolute top-[266px] left-6 w-7 h-7`} />
-            <input type='text' value={ formData.lastname } name='lastname' className={`${lastnameErrBorder === true ? "border border-solid border-[#ED0F0F]":"" } w-full text-lg my-2 py-3 px-2 rounded-md border border-solid border-[#DBE1E1] placeholder:pl-10 placeholder:text-sm outline-none`} placeholder='Enter lastname' onChange={(e)=>{ handleOnChange(e)}} />
+            <input type='text' value={ formData.lastname } name='lastname' className={`${lastnameErrBorder === true ? "border border-solid border-[#ED0F0F]":"" } w-full text-lg my-2 py-3 px-2 rounded-md border border-solid border-[#DBE1E1] placeholder:pl-10 placeholder:text-sm outline-none`} placeholder='Enter lastname' onChange={(e)=>{ handleOnChange(e)}} /> */}
 
             <label htmlFor='first-last-name' className='text-[#858585] text-xl font-semibold'>Email/Phone number</label>
             <EnvelopeIcon className={"absolute top-[367px] left-6 w-7 h-7"} />
