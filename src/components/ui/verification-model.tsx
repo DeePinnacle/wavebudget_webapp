@@ -6,6 +6,7 @@ import {
   } from '../icons/icons'
 
   import { Button } from '../ui/button'
+import { usePathname } from 'next/navigation'
 
 
   type itemProps = {
@@ -24,39 +25,48 @@ import {
 
 const VerificationModel = ({ className, verifyEmailModal, otpErrState, handleCode1, handleCode2, handleCode3, handleCode4, handleCode5, handleConfirmEmail, isOpen, isClose }:itemProps) => {
 
-    const [sec, setSec] = useState<number>(59); // Countdown from 10 seconds
-    const [ min, setMin ] = useState<number>(2)
-    const [intervalId, setIntervalId] = useState<NodeJS.Timeout | null>(null);
+    const [timeLeft, setTimeleft] = useState<number>(179); // 2 minutes 59 seconds
+    // const [intervalId, setIntervalId] = useState<NodeJS.Timeout | null>(null);
+
+    const URLpathname = usePathname()
 
     // modal state check
     useEffect(()=>{
       if(isOpen){
  
                   // Reset countdown when modal opens
-                  setSec(59);
-                  setMin(2)
+                  // setSec(59);
+                  // setMin(2)
             
                   // Start countdown
                   const id = setInterval(() => {
-                      setSec(prevTime => {
-                          if (prevTime == 0o0 ) {
-                              setSec(59)
-                              return 0;
-                          }
-                          return prevTime - 1;
+                      setTimeleft((prev)=>{
+                        if( prev <= 0 ){
+                          clearInterval(id)
+                          return 0
+                        }
+                        return prev - 1
                       });
                   }, 1000);
       
-                  setIntervalId(id);
+                  // setIntervalId(id);
       
-                  // Cleanup interval on component unmount
-                  return () => {
-                      if (intervalId) {
-                          clearInterval(intervalId);
-                      }
-                  };
+                  // // Cleanup interval on component unmount
+                  // return () => {
+                  //     if (intervalId) {
+                  //         clearInterval(intervalId);
+                  //     }
+                  // };
+              }else {
+                setTimeleft(179)
               }
     },[isOpen])
+
+    const formatTime = (seconds: number) => {
+      const minutes = Math.floor(seconds / 60);
+      const remainingSeconds = seconds % 60;
+      return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`
+    }
 
 
   return (
@@ -80,7 +90,14 @@ const VerificationModel = ({ className, verifyEmailModal, otpErrState, handleCod
           <input type='text' name='code-4' className={`${ otpErrState === true ? "border border-solid border-[#ED0F0F]" : ""} w-14 h-14 bg-[#E8EDE9] outline-none rounded-md text-center font-bold text-black`} maxLength={1} onChange={(e)=>{handleCode4(e)}} />
           <input type='text' name='code-5' className={`${ otpErrState === true ? "border border-solid border-[#ED0F0F]" : ""} w-14 h-14 bg-[#E8EDE9] outline-none rounded-md text-center font-bold text-black`} maxLength={1} onChange={(e)=>{handleCode5(e)}} />
         </div>
-        <p className='text-[#858585] my-2'>You haven&apos;t received OTP yet? <span className='text-[#0B7E78] font-bold'><span>{min}:</span><span>{ `${sec < 10 ? `0${sec}` : `${sec}`}` }</span></span></p>
+        {
+          timeLeft !== 0 ? (
+
+            <p className='text-[#858585] my-2'>You haven&apos;t received OTP yet? <span className='text-[#0B7E78] font-bold'><span>{formatTime(timeLeft)}</span></span></p>
+          ): (
+            <p className='text-[#858585] my-2'>You haven&apos;t received OTP yet? <span className='text-[#0B7E78] font-bold'><span>Resend</span></span></p>
+          )
+        }
         <Button className='bg-[#0B7E78] w-full hover:bg-[#0B7E7*] my-5' onClick={(e)=>{handleConfirmEmail(e)}}>Confirm account</Button>
       </form>
     </div>

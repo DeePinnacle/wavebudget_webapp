@@ -268,8 +268,8 @@ const RegForm = () => {
             <LockIcon className={"absolute top-[557px] left-6 w-7 h-7"} />
             <input type='password' value={ formData.confirmPassword } name='confirmPassword' className={`${confirmPassErrBorder === true ? "border border-solid border-[#ED0F0F]":"" } w-full text-lg my-2 py-3 px-2 rounded-md border border-solid border-[#DBE1E1] placeholder:pl-10 placeholder:text-sm outline-none`} placeholder='Confirm password' onChange={(e)=>{ handleOnChange(e)}} />
             <EyeStrokeIcon className={"absolute top-[557px] right-8 w-7 h-7"} />
-            
-            <label htmlFor='checkbox' className='flex flex-row gap-1'>
+
+            <label htmlFor='checkbox' className='flex flex-row gap-1 pt-5'>
               <input type='checkbox' />
               <p id='checkbox' className='text-[#858585] font-bold'><span>I agree to </span><span className='text-[#0B7E78]'>terms of service</span> and <span className='text-[#0B7E78]'>privacy policy</span></p>
             </label>
