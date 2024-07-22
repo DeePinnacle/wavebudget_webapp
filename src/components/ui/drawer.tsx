@@ -29,13 +29,15 @@ const Drawer = ({ children, className }: drawerProps) => {
 
   return (
     <>    
-      <div className={cn(`w-full min-h-screen flex flex-col items-center bg-black/20`, className)} >
+      {/* <div className={cn(`w-full min-h-screen flex flex-col items-center `, className)} >
+      </div> */}
+      <div className="relative p-2 w-full min-h-44 z-50">
         <LogoTitle />
-        <div className="relative w-full min-h-[400px] bottom-0 bg-white rounded-tr-3xl rounded-tl-3xl mt-44 pb-10 px-3">
+      </div>
+        <div className="relative w-full min-h-[400px] bottom-0 bg-white rounded-tr-3xl rounded-tl-3xl pb-10 px-3">
           <DrawerPullIcon className={"mx-auto mb-4"} />
           {children}
         </div>
-      </div>
     </>
   );
 };

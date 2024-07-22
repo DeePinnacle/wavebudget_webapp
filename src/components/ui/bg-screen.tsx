@@ -7,7 +7,7 @@ type screenProps =  {
 
 const BackgroundScreen = ({ children }:screenProps) => {
   return (
-    <div>
+    <div className='w-full min-h-screen'>
         <Image 
             src={"/bg-image.png"}
             alt='background-image'
