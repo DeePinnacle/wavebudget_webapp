@@ -15,7 +15,9 @@ const BackgroundScreen = ({ children }:screenProps) => {
             priority
             className='object-cover'
         />
-        { children }
+        <div className='absolute inset-0 w-full min-h-screen bg-black/20'>
+          { children }
+        </div>
     </div>
   )
 }

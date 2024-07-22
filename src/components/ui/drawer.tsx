@@ -1,16 +1,13 @@
 import React, { PropsWithChildren, useEffect, useRef } from "react";
-import { 
-    LogoIcon,
-    DrawerPullIcon
- } from "../icons/icons";
+import { LogoIcon, DrawerPullIcon } from "../icons/icons";
 import { cn } from "@/lib/utils";
 import useClickOutside from "@/hooks/click-outside";
 import LogoTitle from "./logo-title";
 
- type drawerProps = {
-    children?: React.ReactNode,
-    className?: String,
- }
+type drawerProps = {
+  children?: React.ReactNode;
+  className?: String;
+};
 
 const Drawer = ({ children, className }: drawerProps) => {
   // const boxRef = useRef<HTMLDivElement>(null)
@@ -22,19 +19,19 @@ const Drawer = ({ children, className }: drawerProps) => {
   //     handleDrawer(e)
   //   }
   // }
-  
-//  useClickOutside(boxRef, ()=>{
-//   // handleDrawer()
-//  })
+
+  //  useClickOutside(boxRef, ()=>{
+  //   // handleDrawer()
+  //  })
 
   return (
-    <>    
-      <div className={cn(`relative w-full min-h-screen bg-black/20 flex flex-col items-center z-[9999]`, className)} >
-          <LogoTitle />
-        <div className="w-full min-h-[400px] bottom-0 bg-white rounded-tr-3xl rounded-tl-3xl pb-10 px-3">
-          <DrawerPullIcon className={"mx-auto mb-4"} />
-          {children}
-        </div> 
+    <>
+      <div className="my-5 w-full flex items-center justify-center min-h-3">
+        <LogoTitle />
+      </div>
+      <div className="w-full min-h-[400px] bg-white rounded-tr-3xl rounded-tl-3xl pb-10 px-3">
+        <DrawerPullIcon className={"mx-auto mt-3"} />
+        { children }
       </div>
     </>
   );
