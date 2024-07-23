@@ -112,9 +112,9 @@ const LoginForm = () => {
   },[logoModal])
 
   return (
-    <div className="box-border">
+    <div className="box-border my-4">
       <div className={`${errorDiv === true ? "block" : "hidden"}`}>
-        <div className="absolute -top-28 left-16 bg-[#FFEEEE] w-2/3 px-3 py-4 rounded-xl flex flex-row items-center gap-4">
+        <div className="absolute top-4 left-16 bg-[#FFEEEE] w-2/3 px-3 py-4 rounded-xl flex flex-row items-center gap-4">
           <InvalidIcon className="w-5 h-5" />
           <div>
             {errors.email && (
@@ -133,7 +133,7 @@ const LoginForm = () => {
         >
           Email/Phone number
         </label>
-        <EnvelopeIcon className={"absolute top-[85px] left-6 w-7 h-7"} />
+        <EnvelopeIcon className={"absolute top-[388px] left-6 w-7 h-7"} />
         <input
           type="text"
           value={formData.email}
@@ -155,7 +155,7 @@ const LoginForm = () => {
         >
           Password
         </label>
-        <LockIcon className={"absolute top-[180px] left-6 w-7 h-7"} />
+        <LockIcon className={"absolute top-[485px] left-6 w-7 h-7"} />
         <input
           type="text"
           value={formData.password}
@@ -168,7 +168,7 @@ const LoginForm = () => {
             handleOnChange(e);
           }}
         />
-        <EyeIcon className={"absolute top-[180px] right-8 w-7 h-7"} />
+        <EyeIcon className={"absolute top-[485px] right-8 w-7 h-7"} />
 
         <p className="text-sm text-right">
           Can&apos;t remember password?{" "}

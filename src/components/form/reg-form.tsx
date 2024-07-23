@@ -229,7 +229,7 @@ const RegForm = () => {
   return (
     <div className='box-border'>
       <div className={`${ errorDiv === true ? "block":"hidden"}`}>        
-        <div className='absolute -top-28 left-16 bg-[#FFEEEE] w-2/3 px-3 py-4 rounded-xl flex flex-row items-center gap-4'>
+        <div className='absolute top-3 left-16 bg-[#FFEEEE] w-2/3 px-3 py-4 rounded-xl flex flex-row items-center gap-4'>
           <InvalidIcon className="w-5 h-5" />
           <div>
             { errors.firstname && <p className='text-[#ED0F0F] font-bold'>{ errors.firstname }</p>}
@@ -244,30 +244,30 @@ const RegForm = () => {
       </div>
         <form method='post'>
             <label htmlFor='firstname' className='text-[#858585] text-xl font-semibold'>Firstname</label>
-            <UserIcon className={`absolute top-[70px] left-6 w-7 h-7`} />
+            <UserIcon className={`absolute top-[258px] left-6 w-7 h-7`} />
             <input type='text' value={ formData.firstname } name='firstname' className={`${firstnameErrBorder === true ? "border border-solid border-[#ED0F0F]":"" } w-full text-lg my-2 py-3 px-2 rounded-md border border-solid border-[#DBE1E1] placeholder:pl-10 placeholder:text-sm outline-none`} placeholder='Enter firstname' onChange={(e)=>{ handleOnChange(e)}} />
 
           <label htmlFor='middlename' className='text-[#858585] text-xl font-semibold'>MiddleName</label>
-            <UserIcon className={`absolute top-[170px] left-6 w-7 h-7`} />
+            <UserIcon className={`absolute top-[355px] left-6 w-7 h-7`} />
             <input type='text' value={ formData.middlename } name='middlename' className={`${middlenameErrBorder === true ? "border border-solid border-[#ED0F0F]":"" } w-full text-lg my-2 py-3 px-2 rounded-md border border-solid border-[#DBE1E1] placeholder:pl-10 placeholder:text-sm outline-none`} placeholder='Enter middlename' onChange={(e)=>{ handleOnChange(e)}} />
             
             <label htmlFor='lastname' className='text-[#858585] text-xl font-semibold'>Lastname</label>
-            <UserIcon className={`absolute top-[266px] left-6 w-7 h-7`} />
+            <UserIcon className={`absolute top-[455px] left-6 w-7 h-7`} />
             <input type='text' value={ formData.lastname } name='lastname' className={`${lastnameErrBorder === true ? "border border-solid border-[#ED0F0F]":"" } w-full text-lg my-2 py-3 px-2 rounded-md border border-solid border-[#DBE1E1] placeholder:pl-10 placeholder:text-sm outline-none`} placeholder='Enter lastname' onChange={(e)=>{ handleOnChange(e)}} />
 
-            <label htmlFor='first-last-name' className='text-[#858585] text-xl font-semibold'>Email/Phone number</label>
-            <EnvelopeIcon className={"absolute top-[367px] left-6 w-7 h-7"} />
+            <label htmlFor='email' className='text-[#858585] text-xl font-semibold'>Email/Phone number</label>
+            <EnvelopeIcon className={"absolute top-[555px] left-6 w-7 h-7"} />
             <input type='text' value={ formData.email } name='email' className={`${emailErrBorder === true ? "border border-solid border-[#ED0F0F]":"" } w-full text-lg my-2 py-3 px-2 rounded-md border border-solid border-[#DBE1E1] placeholder:pl-10 placeholder:text-sm outline-none`} placeholder='Email/phone number' onChange={(e)=>{ handleOnChange(e)}} />
 
-            <label htmlFor='first-last-name' className='text-[#858585] text-xl font-semibold'>Password</label>
-            <LockIcon className={"absolute top-[462px] left-6 w-7 h-7"} />
+            <label htmlFor='password' className='text-[#858585] text-xl font-semibold'>Password</label>
+            <LockIcon className={"absolute top-[652px] left-6 w-7 h-7"} />
             <input type='text' value={ formData.password } name='password' className={`${passErrBorder === true ? "border border-solid border-[#ED0F0F]":"" } w-full text-lg my-2 py-3 px-2 rounded-md border border-solid border-[#DBE1E1] placeholder:pl-10 placeholder:text-sm outline-none`} placeholder='Password' onChange={(e)=>{ handleOnChange(e)}} />
-            <EyeIcon className={"absolute top-[462px] right-8 w-7 h-7"} />
+            <EyeIcon className={"absolute top-[652px] right-8 w-7 h-7"} />
 
-            <label htmlFor='first-last-name' className='text-[#858585] text-xl font-semibold'>Confirm password</label>
-            <LockIcon className={"absolute top-[557px] left-6 w-7 h-7"} />
+            <label htmlFor='confirm-password' className='text-[#858585] text-xl font-semibold'>Confirm password</label>
+            <LockIcon className={"absolute top-[750px] left-6 w-7 h-7"} />
             <input type='password' value={ formData.confirmPassword } name='confirmPassword' className={`${confirmPassErrBorder === true ? "border border-solid border-[#ED0F0F]":"" } w-full text-lg my-2 py-3 px-2 rounded-md border border-solid border-[#DBE1E1] placeholder:pl-10 placeholder:text-sm outline-none`} placeholder='Confirm password' onChange={(e)=>{ handleOnChange(e)}} />
-            <EyeStrokeIcon className={"absolute top-[557px] right-8 w-7 h-7"} />
+            <EyeStrokeIcon className={"absolute top-[750px] right-8 w-7 h-7"} />
 
             <label htmlFor='checkbox' className='flex flex-row gap-1 pt-5'>
               <input type='checkbox' />
