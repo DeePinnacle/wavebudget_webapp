@@ -29,7 +29,7 @@ const Drawer = ({ children, className }: drawerProps) => {
       <div className="my-5 w-full flex items-center justify-center min-h-3">
         <LogoTitle />
       </div>
-      <div className="w-full min-h-[400px] bg-white rounded-tr-3xl rounded-tl-3xl pb-10 px-3">
+      <div className="w-full min-h-[500px] bg-white rounded-tr-3xl rounded-tl-3xl pb-10 px-3">
         <DrawerPullIcon className={"mx-auto mt-3"} />
         { children }
       </div>
