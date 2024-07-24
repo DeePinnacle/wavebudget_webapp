@@ -28,7 +28,7 @@ const VerificationModel = ({ className, verifyEmailModal, otpErrState, handleCod
     const [timeLeft, setTimeleft] = useState<number>(179); // 2 minutes 59 seconds
     // const [intervalId, setIntervalId] = useState<NodeJS.Timeout | null>(null);
 
-    const URLpathname = usePathname()
+    const pathname = usePathname()
 
     // modal state check
     useEffect(()=>{
@@ -71,13 +71,11 @@ const VerificationModel = ({ className, verifyEmailModal, otpErrState, handleCod
 
   return (
     <div className={`${ verifyEmailModal === true ? "block" : "hidden" } flex flex-col items-center justify-center`}>
-    <div className='bg-white w-full min-h-2 py-10 mx-auto box-border px-2 absolute top-20 rounded-xl shadow-lg'>
+      <div className='fixed inset-0 w-full min-h-screen bg-black/20'></div>
+    <div className={`${ pathname ==='/register' ? 'mt-36' : '' } bg-white w-full min-h-2 py-10 mx-auto box-border px-2 absolute top-20 rounded-xl shadow-lg`}>
       <div className='relative overflow-hidden w-16 h-16 rounded-full p-2 mx-auto'>
         <GreenLogoIcon />
       </div>
-    {/* <p className='text-black'>
-      <span>{min}:</span><span>{ `${sec < 10 ? `0${sec}` : `${sec}`}` }</span>
-    </p> */}
       <h2 className='mt-5 text-black text-center text-xl font-bold'>Let&apos;s verify your email address</h2>
       <p className='my-3 text-center text-[#858585]'>
         We just sent an OTP to qubigs 101@gmail.com. Proceed to type in the OTP to confirm your account.

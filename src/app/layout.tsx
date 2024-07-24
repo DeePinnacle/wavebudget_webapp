@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "wavebudget",
-  description: "Wavebudget-your everyday installment shopping platform. Buy items on credit and get it delivered instantly after 50% upfront payment.",
+  description: "Wavebudget-your everyday installment shopping platform. Buy items on credit and get it delivered instantly after 50% upfront payment. ",
 };
 
 export default function RootLayout({
