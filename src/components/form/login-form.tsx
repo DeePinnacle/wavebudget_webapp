@@ -171,8 +171,8 @@ const LoginForm = () => {
         <EyeIcon className={"absolute top-[485px] right-8 w-7 h-7"} />
 
         <p className="text-sm text-right">
-          Can&apos;t remember password?{" "}
-          <span className="font-bold text-[#0B7E78]">
+          
+      <span className="font-bold text-[#0B7E78]">
             <Link href={"/recover-password"}>Forgot password</Link>
           </span>
         </p>
