@@ -243,30 +243,30 @@ const RegForm = () => {
         </div>
       </div>
         <form method='post'>
-            <label htmlFor='firstname' className='text-[#858585] text-xl font-semibold'>Firstname</label>
+            <label htmlFor='firstname' className='text-[#858585] text-xl font-semibold'>First Name</label>
             <UserIcon className={`absolute top-[258px] left-6 w-7 h-7`} />
-            <input type='text' value={ formData.firstname } name='firstname' className={`${firstnameErrBorder === true ? "border border-solid border-[#ED0F0F]":"" } w-full text-lg my-2 py-3 px-2 rounded-md border border-solid border-[#DBE1E1] placeholder:pl-10 placeholder:text-sm outline-none`} placeholder='Enter firstname' onChange={(e)=>{ handleOnChange(e)}} />
+            <input type='text' value={ formData.firstname } name='firstname' className={`${firstnameErrBorder === true ? "border border-solid border-[#ED0F0F]":"" } w-full text-lg my-2 py-3 px-2 rounded-md border border-solid border-[#DBE1E1] placeholder:pl-10 placeholder:text-sm outline-none`} placeholder='Enter First Name' onChange={(e)=>{ handleOnChange(e)}} />
 
-          <label htmlFor='middlename' className='text-[#858585] text-xl font-semibold'>MiddleName</label>
+          <label htmlFor='middlename' className='text-[#858585] text-xl font-semibold'>Middle Name</label>
             <UserIcon className={`absolute top-[355px] left-6 w-7 h-7`} />
-            <input type='text' value={ formData.middlename } name='middlename' className={`${middlenameErrBorder === true ? "border border-solid border-[#ED0F0F]":"" } w-full text-lg my-2 py-3 px-2 rounded-md border border-solid border-[#DBE1E1] placeholder:pl-10 placeholder:text-sm outline-none`} placeholder='Enter middlename' onChange={(e)=>{ handleOnChange(e)}} />
+            <input type='text' value={ formData.middlename } name='middlename' className={`${middlenameErrBorder === true ? "border border-solid border-[#ED0F0F]":"" } w-full text-lg my-2 py-3 px-2 rounded-md border border-solid border-[#DBE1E1] placeholder:pl-10 placeholder:text-sm outline-none`} placeholder='Enter Middle Name' onChange={(e)=>{ handleOnChange(e)}} />
             
-            <label htmlFor='lastname' className='text-[#858585] text-xl font-semibold'>Lastname</label>
+            <label htmlFor='lastname' className='text-[#858585] text-xl font-semibold'>Last Name</label>
             <UserIcon className={`absolute top-[455px] left-6 w-7 h-7`} />
-            <input type='text' value={ formData.lastname } name='lastname' className={`${lastnameErrBorder === true ? "border border-solid border-[#ED0F0F]":"" } w-full text-lg my-2 py-3 px-2 rounded-md border border-solid border-[#DBE1E1] placeholder:pl-10 placeholder:text-sm outline-none`} placeholder='Enter lastname' onChange={(e)=>{ handleOnChange(e)}} />
+            <input type='text' value={ formData.lastname } name='lastname' className={`${lastnameErrBorder === true ? "border border-solid border-[#ED0F0F]":"" } w-full text-lg my-2 py-3 px-2 rounded-md border border-solid border-[#DBE1E1] placeholder:pl-10 placeholder:text-sm outline-none`} placeholder='Enter Last Name' onChange={(e)=>{ handleOnChange(e)}} />
 
-            <label htmlFor='email' className='text-[#858585] text-xl font-semibold'>Email/Phone number</label>
+            <label htmlFor='email' className='text-[#858585] text-xl font-semibold'>Email/Phone Number</label>
             <EnvelopeIcon className={"absolute top-[555px] left-6 w-7 h-7"} />
-            <input type='text' value={ formData.email } name='email' className={`${emailErrBorder === true ? "border border-solid border-[#ED0F0F]":"" } w-full text-lg my-2 py-3 px-2 rounded-md border border-solid border-[#DBE1E1] placeholder:pl-10 placeholder:text-sm outline-none`} placeholder='Email/phone number' onChange={(e)=>{ handleOnChange(e)}} />
+            <input type='text' value={ formData.email } name='email' className={`${emailErrBorder === true ? "border border-solid border-[#ED0F0F]":"" } w-full text-lg my-2 py-3 px-2 rounded-md border border-solid border-[#DBE1E1] placeholder:pl-10 placeholder:text-sm outline-none`} placeholder='Email/Phone Number' onChange={(e)=>{ handleOnChange(e)}} />
 
             <label htmlFor='password' className='text-[#858585] text-xl font-semibold'>Password</label>
             <LockIcon className={"absolute top-[652px] left-6 w-7 h-7"} />
             <input type='text' value={ formData.password } name='password' className={`${passErrBorder === true ? "border border-solid border-[#ED0F0F]":"" } w-full text-lg my-2 py-3 px-2 rounded-md border border-solid border-[#DBE1E1] placeholder:pl-10 placeholder:text-sm outline-none`} placeholder='Password' onChange={(e)=>{ handleOnChange(e)}} />
             <EyeIcon className={"absolute top-[652px] right-8 w-7 h-7"} />
 
-            <label htmlFor='confirm-password' className='text-[#858585] text-xl font-semibold'>Confirm password</label>
+            <label htmlFor='confirm-password' className='text-[#858585] text-xl font-semibold'>Confirm Password</label>
             <LockIcon className={"absolute top-[750px] left-6 w-7 h-7"} />
-            <input type='password' value={ formData.confirmPassword } name='confirmPassword' className={`${confirmPassErrBorder === true ? "border border-solid border-[#ED0F0F]":"" } w-full text-lg my-2 py-3 px-2 rounded-md border border-solid border-[#DBE1E1] placeholder:pl-10 placeholder:text-sm outline-none`} placeholder='Confirm password' onChange={(e)=>{ handleOnChange(e)}} />
+            <input type='password' value={ formData.confirmPassword } name='confirmPassword' className={`${confirmPassErrBorder === true ? "border border-solid border-[#ED0F0F]":"" } w-full text-lg my-2 py-3 px-2 rounded-md border border-solid border-[#DBE1E1] placeholder:pl-10 placeholder:text-sm outline-none`} placeholder='Confirm Password' onChange={(e)=>{ handleOnChange(e)}} />
             <EyeStrokeIcon className={"absolute top-[750px] right-8 w-7 h-7"} />
 
             <label htmlFor='checkbox' className='flex flex-row gap-1 pt-5'>
