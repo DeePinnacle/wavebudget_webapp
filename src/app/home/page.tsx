@@ -131,7 +131,7 @@ const HomePage = () => {
               />
             </div>
             <p className="text-[#858585] text-center">
-              No recent transaction yet. start{" "}
+              No recent transaction. start{" "}
               <span className="text-[#0B7E78] font-bold">shopping now</span>
             </p>
           </div>
@@ -191,7 +191,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      <span onClick={handleOverlay}>
+      <span className="inline-block" onClick={handleOverlay}>
         <MobileMenu overlay={overlay} />
       </span>
     </div>
