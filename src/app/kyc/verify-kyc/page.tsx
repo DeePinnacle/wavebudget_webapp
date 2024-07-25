@@ -674,8 +674,8 @@ const VerifyKYC = () => {
               <div className="absolute -top-52 inset-0 w-full min-h-screen bg-black/20 box-border">
                   <div className="absolute bottom-12 bg-white min-h-9 box-border px-2 py-8 rounded-3xl">
                     <GreenLogoIcon className={"mx-auto"} />
-                    <h2 className="font-bold text-xl text-center mt-6">Job Weldon</h2>
-                    <p className="text-center text-[#858585] my-3">Usually it takes 2 -5 working days to confirm your KYC, we will keep in touch once if KYC was valid or not</p>
+                    <h2 className="font-bold text-xl text-center mt-6">Job Weldone</h2>
+                    <p className="text-center text-[#858585] my-3">A notification about your veification would be sent to you in about 3-5 working days.</p>
                     <Button className="w-full bg-[#0B7E78] hover:bg-[#0B7E78]" size={"lg"} asChild>
                       <Link href={"/home"}>Back to home</Link>
                     </Button>
