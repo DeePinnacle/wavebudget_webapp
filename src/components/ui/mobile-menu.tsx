@@ -4,10 +4,11 @@ import { HomeIcon, LogoIcon, PaymentIcon, WalletIcon, XIcon } from "../icons/ico
 import Image from "next/image";
 
 type overlayProps = {
-  overlay: boolean
+  overlay: boolean,
+  handleOverlay: () => void
 }
 
-const MobileMenu = ({ overlay }:overlayProps) => {
+const MobileMenu = ({ overlay, handleOverlay }:overlayProps) => {
   return (
     <div className="fixed bottom-0 w-full min-h-28 bg-red-500 shadow-2xl shadow-black grid grid-cols-2 gap-2 p-2">
       <div className="p-2 w-40 h-20 flex flex-row items-center gap-4">
@@ -44,7 +45,7 @@ const MobileMenu = ({ overlay }:overlayProps) => {
           Profile
         </Link>
       </div>
-      <div className="fixed flex flex-row items-center justify-center bottom-16 left-1/2 -translate-x-1/2 w-24 h-24 rounded-full bg-[#0B7E78] shadow-2xl shadow-gray-300">
+      <div className="fixed flex flex-row items-center justify-center bottom-16 left-1/2 -translate-x-1/2 w-24 h-24 rounded-full bg-[#0B7E78] shadow-2xl shadow-gray-300" onClick={handleOverlay}>
         {
           overlay === true && <XIcon className={"w-12 h-12"} />  
         }
