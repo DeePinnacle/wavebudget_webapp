@@ -93,7 +93,7 @@ const LoginForm = () => {
                     setTimeRemaining(prevTime => {
                         if (prevTime <= 1) {
                             clearInterval(id);
-                            navigate.push("/home")
+                            navigate.push("/kyc")
                             return 0;
                         }
                         return prevTime - 1;
