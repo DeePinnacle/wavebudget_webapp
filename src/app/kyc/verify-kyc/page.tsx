@@ -148,50 +148,50 @@ const VerifyKYC = () => {
                         htmlFor="firstname"
                         className="text-[#858585] text-lg font-bold pt-4"
                       >
-                        First name
+                        First Name
                       </label>
                       <input
                         type="text"
                         name="firstname"
                         className="w-full text-lg my-2 outline-none border border-solid border-[#DBE1E1] px-2 py-4 rounded-md"
-                        placeholder="First name"
+                        placeholder="First Name"
                       />
 
                       <label
                         htmlFor="middlename"
                         className="text-[#858585] text-lg font-bold pt-4"
                       >
-                        Middle name
+                        Middle Name
                       </label>
                       <input
                         type="text"
                         name="middlename"
                         className="w-full text-lg my-2 outline-none border border-solid border-[#DBE1E1] px-2 py-4 rounded-md"
-                        placeholder="Middle name"
+                        placeholder="Middle Name"
                       />
 
                       <label
                         htmlFor="lastname"
                         className="text-[#858585] text-lg font-bold pt-4"
                       >
-                        Last name
+                        Last Name
                       </label>
                       <input
                         type="text"
                         name="lastname"
                         className="w-full text-lg my-2 outline-none border border-solid border-[#DBE1E1] px-2 py-4 rounded-md"
-                        placeholder="Last name"
+                        placeholder="Last Name"
                       />
 
                       <label
                         htmlFor="phonenumber"
                         className="text-[#858585] text-lg font-bold pt-4"
                       >
-                        Phone number
+                        Phone Number
                       </label>
                       <input
                         type="text"
-                        name="phonenumber"
+                        name="phone Number"
                         className="w-full text-lg my-2 outline-none border border-solid border-[#DBE1E1] px-2 py-4 rounded-md"
                         placeholder="Phone number"
                       />
@@ -257,7 +257,7 @@ const VerifyKYC = () => {
                         htmlFor="phonenumber"
                         className="text-[#858585] text-lg font-bold pt-4"
                       >
-                        Google location
+                        Google Location
                       </label>
                       <input
                         type="text"
@@ -282,7 +282,7 @@ const VerifyKYC = () => {
                         type="text"
                         name="kin-name"
                         className="w-full text-lg my-2 outline-none border border-solid border-[#DBE1E1] px-2 py-4 rounded-md"
-                        placeholder="First and last name"
+                        placeholder="First and Last Name"
                       />
 
                       <label
@@ -320,7 +320,7 @@ const VerifyKYC = () => {
                       <br />
                       <div className="mt-4">
                         <p className="text-[#858585] text-xl font-bold">
-                          Employment status
+                          Employment Status
                         </p>
                         <span className="flex flex-row items-center mt-4">
                           <input
@@ -370,7 +370,7 @@ const VerifyKYC = () => {
                             htmlFor="selfemployed"
                             className="text-[#858585] font-bold"
                           >
-                            Self employed
+                            Self Employed
                           </label>
                         </span>
                       </div>
@@ -378,7 +378,7 @@ const VerifyKYC = () => {
                       employmentChecked === "self-employed" ? null : (
                         <div className="mt-4">
                           <p className="text-[#858585] text-xl font-bold">
-                            Firm type
+                            Firm Type
                           </p>
                           <span className="flex flex-row items-center mt-4">
                             <input
@@ -394,7 +394,7 @@ const VerifyKYC = () => {
                               htmlFor="private"
                               className="text-[#858585] font-bold"
                             >
-                              Private firm
+                              Private Firm
                             </label>
                           </span>
                           <span className="flex flex-row items-center my-3">
@@ -411,7 +411,7 @@ const VerifyKYC = () => {
                               htmlFor="civil"
                               className="text-[#858585] font-bold"
                             >
-                              Civil servant
+                              Civil Servant
                             </label>
                           </span>
                         </div>
@@ -436,12 +436,12 @@ const VerifyKYC = () => {
                             htmlFor="work-address"
                             className="text-[#858585] font-bold"
                           >
-                            Work address
+                            Work Address
                           </label>
                           <input
                             type="text"
                             name="workaddress"
-                            placeholder="Work address"
+                            placeholder="Work Address"
                             className="w-full border border-solid border-[#DBE1E1] px-3 py-4 outline-none rounded-md"
                           />
 
@@ -449,12 +449,12 @@ const VerifyKYC = () => {
                             htmlFor="job-role"
                             className="text-[#858585] font-bold"
                           >
-                            Job role
+                            Job Role
                           </label>
                           <input
                             type="text"
                             name="jobrole"
-                            placeholder="Job role"
+                            placeholder="Job Role"
                             className="w-full border border-solid border-[#DBE1E1] px-3 py-4 outline-none rounded-md"
                           />
 
@@ -478,7 +478,7 @@ const VerifyKYC = () => {
                             htmlFor="job-level"
                             className="text-[#858585] font-bold"
                           >
-                            Job level
+                            Job Level
                           </label>
                           <select
                             name="job-level"
@@ -505,12 +505,12 @@ const VerifyKYC = () => {
                             htmlFor="work-address"
                             className="text-[#858585] font-bold"
                           >
-                            Work address
+                            Work Address
                           </label>
                           <input
                             type="text"
                             name="workaddress"
-                            placeholder="Work address"
+                            placeholder="Work Address"
                             className="w-full border border-solid border-[#DBE1E1] px-3 py-4 outline-none rounded-md"
                           />
 
@@ -518,12 +518,12 @@ const VerifyKYC = () => {
                             htmlFor="job-role"
                             className="text-[#858585] font-bold"
                           >
-                            Job role
+                            Job Role
                           </label>
                           <input
                             type="text"
                             name="jobrole"
-                            placeholder="Job role"
+                            placeholder="Job Role"
                             className="w-full border border-solid border-[#DBE1E1] px-3 py-4 outline-none rounded-md"
                           />
 
@@ -546,12 +546,12 @@ const VerifyKYC = () => {
                             htmlFor="businessname"
                             className="text-[#858585] font-bold"
                           >
-                            Business name
+                            Business Name
                           </label>
                           <input
                             type="text"
                             name="businessname"
-                            placeholder="Business name"
+                            placeholder="Business Name"
                             className="w-full border border-solid border-[#DBE1E1] px-3 py-4 outline-none rounded-md"
                           />
 
@@ -559,12 +559,12 @@ const VerifyKYC = () => {
                             htmlFor="businesslocation "
                             className="text-[#858585] font-bold"
                           >
-                            Business location
+                            Business Location
                           </label>
                           <input
                             type="text"
                             name="businesslocation"
-                            placeholder="Business location"
+                            placeholder="Business Location"
                             className="w-full border border-solid border-[#DBE1E1] px-3 py-4 outline-none rounded-md"
                           />
 
@@ -572,12 +572,12 @@ const VerifyKYC = () => {
                             htmlFor="max-income"
                             className="text-[#858585] font-bold"
                           >
-                            Maximum income per month
+                            Maximum Income Per Month
                           </label>
                           <input
                             type="text"
                             name="maxiincome"
-                            placeholder="Maximum income"
+                            placeholder="Maximum Income"
                             className="w-full border border-solid border-[#DBE1E1] px-3 py-4 outline-none rounded-md"
                           />
 
@@ -585,12 +585,12 @@ const VerifyKYC = () => {
                             htmlFor="salary"
                             className="text-[#858585] font-bold"
                           >
-                            Minimum income per month
+                            Minimum Income Per Month
                           </label>
                           <input
                             type="text"
                             name="minincome"
-                            placeholder="Minimum income"
+                            placeholder="Minimum Income"
                             className="w-full border border-solid border-[#DBE1E1] px-3 py-4 outline-none rounded-md"
                           />
                         </div>
