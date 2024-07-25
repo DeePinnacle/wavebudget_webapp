@@ -10,7 +10,7 @@ type overlayProps = {
 
 const MobileMenu = ({ overlay, handleOverlay }:overlayProps) => {
   return (
-    <div className="fixed bottom-0 w-full min-h-28 bg-red-500 shadow-2xl shadow-black grid grid-cols-2 gap-2 p-2">
+    <div className="fixed bottom-0 w-full min-h-28 bg-white shadow-2xl shadow-black grid grid-cols-2 gap-2 p-2">
       <div className="p-2 w-40 h-20 flex flex-row items-center gap-4">
         <Link
           href={"#"}
