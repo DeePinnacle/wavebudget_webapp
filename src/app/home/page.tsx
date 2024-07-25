@@ -191,7 +191,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      <span className="inline-block" onClick={handleOverlay}>
+      <span className="inline-block bg-red-500" onClick={handleOverlay}>
         <MobileMenu overlay={overlay} />
       </span>
     </div>
