@@ -4,6 +4,18 @@ import React, { useState } from "react";
 import { BellIcon, NotificationIcon } from "../../components/icons/icons";
 import MobileMenu from "../../components/ui/mobile-menu";
 
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+// import './styles.css';
+
+// import required modules
+import { Autoplay } from 'swiper/modules';
+
 const HomePage = () => {
   const [overlay, setOverlay] = useState(false);
   const handleOverlay = () => {
@@ -24,7 +36,7 @@ const HomePage = () => {
             />
           </div>
           <div>
-            <p className="text-[#858585]">Good afternon</p>
+            <p className="text-[#858585]">Good afternoon</p>
             <p className="text-[#010E0D] font-bold">Wisdom Umanah</p>
           </div>
         </div>
@@ -86,37 +98,106 @@ const HomePage = () => {
         </div>
       </div>
       {/* advert section  */}
-      <div className="my-4 flex flex-row items-center justify-between">
-        <div className="bg-[#0FEDED] w-8 min-h-24 rounded-tr-lg rounded-br-lg"></div>
-        <div className="relative left-[1px] bg-[#958ED5] w-4/5 mx-auto min-h-24 rounded-lg flex flex-row gap-2">
-          <div className="relative w-20 h-32 overflow-hidden">
-            <Image
-              src={"/shopping.png"}
-              alt="user-shopping"
-              fill
-              priority
-              className="object-cover"
-            />
+        <Swiper 
+                slidesPerView={'auto'}
+                spaceBetween={30}
+                pagination={{
+                  clickable: true,
+                }}
+                loop = { true }
+                autoplay = {{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                }}
+                modules={[Autoplay]}
+                className="mySwiper"
+        >
+          <SwiperSlide>
+          <div className="relative left-[1px] bg-[#0FEDED] w-4/5 mx-auto min-h-24 rounded-lg flex flex-row gap-2">
+            <div className="relative w-20 h-32 overflow-hidden">
+              <Image
+                src={"/shopping.png"}
+                alt="user-shopping"
+                fill
+                priority
+                className="object-cover"
+              />
+            </div>
+            <div className="mt-10">
+              <h1 className="text-center font-bold">Have the experience</h1>
+              <p className="text-white text-center text-xs">
+                by exploring our e-commerce products
+              </p>
+            </div>
+            <div className="relative left-1 w-20 h-32 overflow-hidden">
+              <Image
+                src={"/shopping.png"}
+                alt="user-shopping"
+                fill
+                priority
+                className="object-cover"
+              />
+            </div>
           </div>
-          <div className="mt-10">
-            <h1 className="text-center font-bold">Have the experience</h1>
-            <p className="text-white text-center text-xs">
-              by exploring our e-commerce products
-            </p>
+          </SwiperSlide>          
+          <SwiperSlide>
+          <div className="relative left-[1px] bg-[#958ED5] w-4/5 mx-auto min-h-24 rounded-lg flex flex-row gap-2">
+            <div className="relative w-20 h-32 overflow-hidden">
+              <Image
+                src={"/shopping.png"}
+                alt="user-shopping"
+                fill
+                priority
+                className="object-cover"
+              />
+            </div>
+            <div className="mt-10">
+              <h1 className="text-center font-bold">Have the experience</h1>
+              <p className="text-white text-center text-xs">
+                by exploring our e-commerce products
+              </p>
+            </div>
+            <div className="relative left-1 w-20 h-32 overflow-hidden">
+              <Image
+                src={"/shopping.png"}
+                alt="user-shopping"
+                fill
+                priority
+                className="object-cover"
+              />
+            </div>
           </div>
-          <div className="relative left-1 w-20 h-32 overflow-hidden">
-            <Image
-              src={"/shopping.png"}
-              alt="user-shopping"
-              fill
-              priority
-              className="object-cover"
-            />
+          </SwiperSlide>          
+          <SwiperSlide>
+          <div className="relative left-[1px] bg-[#ED0F0F] w-4/5 mx-auto min-h-24 rounded-lg flex flex-row gap-2">
+            <div className="relative w-20 h-32 overflow-hidden">
+              <Image
+                src={"/shopping.png"}
+                alt="user-shopping"
+                fill
+                priority
+                className="object-cover"
+              />
+            </div>
+            <div className="mt-10">
+              <h1 className="text-center font-bold">Have the experience</h1>
+              <p className="text-white text-center text-xs">
+                by exploring our e-commerce products
+              </p>
+            </div>
+            <div className="relative left-1 w-20 h-32 overflow-hidden">
+              <Image
+                src={"/shopping.png"}
+                alt="user-shopping"
+                fill
+                priority
+                className="object-cover"
+              />
+            </div>
           </div>
-        </div>
-        <div className="bg-[#ED0F0F] w-8 min-h-24 rounded-tl-lg rounded-bl-lg"></div>
-      </div>
-      {/* transaciono histroy  */}
+          </SwiperSlide>
+        </Swiper>
+      {/* transacion histroy  */}
       <div className="px-4 py-2">
         <div className="bg-white w-full min-h-80 rounded-tl-3xl rounded-tr-3xl pt-3 pb-28 px-4">
           <h2 className="font-bold text-xl">Recent transaction</h2>
