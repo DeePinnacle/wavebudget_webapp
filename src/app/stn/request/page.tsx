@@ -70,6 +70,7 @@ const StnRequest = () => {
           <>
             <div className="my-2 flex flex-row items-center justify-between gap-4">
               <div className="flex flex-row gap-2 items-center my-3">
+                <div className="w-3 h-3 rounded-full bg-[#0B7E78]"></div>
                 <div className="relative w-14 h-14 rounded-full overflow-hidden">
                   <Image
                     src={"/user.png"}
@@ -100,6 +101,7 @@ const StnRequest = () => {
             </div>
             <div className="my-2 flex flex-row items-center justify-between gap-4">
               <div className="flex flex-row gap-2 items-center my-3">
+                <div className="w-3 h-3 rounded-full bg-[#0B7E78]"></div>
                 <div className="relative w-14 h-14 rounded-full overflow-hidden">
                   <Image
                     src={"/user.png"}
@@ -127,6 +129,7 @@ const StnRequest = () => {
             </div>
             <div className="my-2 flex flex-row items-center justify-between gap-4">
               <div className="flex flex-row gap-2 items-center my-3">
+                <div className="w-3 h-3 rounded-full bg-[#0B7E78]"></div>
                 <div className="relative w-14 h-14 rounded-full overflow-hidden">
                   <Image
                     src={"/user.png"}
@@ -154,6 +157,7 @@ const StnRequest = () => {
             </div>
             <div className="my-2 flex flex-row items-center justify-between gap-4">
               <div className="flex flex-row gap-2 items-center my-3">
+                <div className="w-3 h-3 rounded-full bg-[#0B7E78]"></div>
                 <div className="relative w-14 h-14 rounded-full overflow-hidden">
                   <Image
                     src={"/user.png"}
