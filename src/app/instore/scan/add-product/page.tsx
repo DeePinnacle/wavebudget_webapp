@@ -10,6 +10,9 @@ type FormField = "product" | "quantity" | "price";
 
 const AddProduct = () => {
 
+  // set errors 
+  const [errors, setErrors] = useState<string>()
+
   // get add to cart
   const addToCart = useCartStore((state) => state.addToCart)
 
@@ -77,8 +80,22 @@ const AddProduct = () => {
   // handle overlays
   const handleOverlay = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     event.preventDefault()
-    setOverlay(true)
-    console.log(productList)
+    productList.map((item, index)=>{
+      if(!item.product){
+        setOverlay(false)
+        return setErrors("Enter product name")
+      }else if(!item.price){
+        setOverlay(false)
+        return setErrors("Enter product price")
+      }else if(!item.quantity){
+        setOverlay(false)
+        return setErrors("Enter product quantity")
+      }else{
+        event.preventDefault()
+        setOverlay(true)
+        console.log(productList)
+      }
+    })
   }
 
   // drop overlay
@@ -111,6 +128,13 @@ const AddProduct = () => {
       {/* add product */}
       <div className="w-full min-h-screen bg-white mt-7 rounded-tl-3xl rounded-tr-3xl px-4 py-8">
         <form>
+          {
+            errors && (
+              <div className="w-full bg-[#FEECEC] px-2 py-8 min-h-7 my-3">
+                <p className="text-[#ED0F0F] text-center font-bold">{ errors }</p>
+              </div>
+            )
+          }
           {productList.map((form, index) => (
             <div key={index}>
               <label
@@ -124,7 +148,7 @@ const AddProduct = () => {
                 name="product"
                 placeholder="product name"
                 value={form.product}
-                className="w-full outline-none border border-solid border-[#DBE1E1] px-2 py-3 my-2 rounded-lg text-lg"
+                className={` ${ errors === 'Enter product name' ? 'border border-solid border-red-500' : '' } w-full outline-none border border-solid border-[#DBE1E1] px-2 py-3 my-2 rounded-lg text-lg`}
                 onChange={(event) => handleFormChange(event, index)}
               />
               <div className="grid grid-cols-2 gap-2 items-center">
@@ -140,7 +164,7 @@ const AddProduct = () => {
                     name="quantity"
                     value={form.quantity}
                     placeholder="Quantity"
-                    className="w-full outline-none border border-solid border-[#DBE1E1] px-2 py-3 my-2 rounded-lg text-lg"
+                    className={`${ errors === 'Enter product quantity' ? 'border border-solid border-red-500' : '' } w-full outline-none border border-solid border-[#DBE1E1] px-2 py-3 my-2 rounded-lg text-lg`}
                     onChange={(event) => handleFormChange(event, index)}
                   />
                 </span>
@@ -156,7 +180,7 @@ const AddProduct = () => {
                     name="price"
                     value={form.price}
                     placeholder="product price"
-                    className="w-full outline-none border border-solid border-[#DBE1E1] px-2 py-3 my-2 rounded-lg text-lg"
+                    className={`${ errors === 'Enter product price' ? 'border border-solid border-red-500' : '' } w-full outline-none border border-solid border-[#DBE1E1] px-2 py-3 my-2 rounded-lg text-lg`}
                     onChange={(event) => handleFormChange(event, index)}
                   />
                 </span>
@@ -222,7 +246,7 @@ const AddProduct = () => {
             <div className="w-12 h-12 bg-[#F6FEFE] rounded-full flex flex-row items-center justify-center mx-auto">
               <ExclamationIcon className={"text-[#0B7E78]"} />
             </div>
-            <p className="font-semibold text-center my-2 max-w-prose">Are sure the prices you entered are accurate?</p>
+            <p className="font-semibold text-center my-2 max-w-prose">Are you sure the prices you entered are accurate?</p>
             <div className="grid grid-cols-2 gap-2 my-6">
               <Button className="bg-white border border-solid border-[#0B7E78] text-[#0B7E78] font-semibold w-full hover:bg-white" size={"lg"} onClick={ () => handleAddToCart() }>Yes</Button>
               <Button type="button" className="bg-[#0B7E78] w-full hover:bg-[#0B7E78]" size={"lg"} onClick={ handleDropOverlay } >No</Button>

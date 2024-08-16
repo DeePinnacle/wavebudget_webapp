@@ -35,6 +35,7 @@ const Invoice = () => {
   const navigation = useRouter();
   const handleBack = () => {
     navigation.back();
+    // alert("clicked")
   };
 
   const handleDone = () => {

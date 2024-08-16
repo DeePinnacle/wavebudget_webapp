@@ -56,7 +56,7 @@ const Cart = () => {
           className="bg-white w-10 h-10 rounded-full flex items-center justify-center"
           onClick={handleBack}
         >
-          <BackIcon className={"text-[#0B7E78] font-bold w-8 h-8"} />
+          <BackIcon className={"text-[#0B7E78] font-bold w-8 h-8 cursor-pointer"} />
         </div>
         <div className="w-11/12 mx-auto ml-20">
           <p className="text-black text-center text-2xl font-semibold font-montserrat w-1/2">
@@ -83,7 +83,7 @@ const Cart = () => {
                   <div className="bg-white w-[96%] min-h-4 my-5 mx-auto px-2 py-4 rounded-lg">
         <span className="flex flex-row items-center justify-between mb-8">
           <p className="font-semibold text-lg">Adams Complex</p>
-          <Link href="#" className="text-[#0B7E78] font-semibold">Edit item</Link>
+          <Link href="/instore/scan/add-product" className="text-[#0B7E78] font-semibold">Edit item</Link>
         </span>
         {carts.map((item, index) => (
           <div key={index}>

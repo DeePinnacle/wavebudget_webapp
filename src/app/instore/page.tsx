@@ -1,9 +1,15 @@
+'use client'
 import { CartIcon, PlusIcon, QrIcon, ToggleEyeIcon } from "@/components/icons/icons";
-import { QrCode } from "lucide-react";
+import { EyeOff, QrCode } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, MouseEvent } from "react";
 const Instore = () => {
+  const [ hideBalance, setHideBalance] = useState(false)
+  // handle hide balance
+  const handleBalanceToggle = () => {
+    setHideBalance(!hideBalance)
+  }
   return (
     <>
       <div className="bg-slate-100 w-full min-h-screen pb-14">
@@ -11,8 +17,21 @@ const Instore = () => {
           <div className="bg-[#0B7E78] w-full h-40 rounded-md">
             <h1 className="text-white text-center text-lg pt-8 pb-3 font-semibold">Account Balance</h1>
             <div className="flex flex-row items-center gap-7 p-2 w-[90%] mx-auto">
-              <p className="text-4xl text-white text-center ml-16"><span className="text-4xl">₦</span>50,000<span className="text-4xl">.00</span></p>
-              <ToggleEyeIcon className={'w-8 h-8'} />
+              {
+                hideBalance === false ? (
+                  <p className="text-4xl text-white text-center ml-16"><span className="text-4xl">₦</span>50,000<span className="text-4xl">.00</span></p>
+                ): (
+                  <p className="text-4xl text-white text-center ml-16">************</p>
+                )
+              }
+              {
+                hideBalance === false ? (
+                  // <ToggleEyeIcon className={'w-8 h-8'} />  
+                    <Image className="-mt-3" src={"/EyeIcon.png"} alt="eye-icon" width={30} height={30} priority onClick={handleBalanceToggle} />
+                ):(
+                  <EyeOff className="w-8 h-8 text-white -mt-4" onClick={ handleBalanceToggle } />
+                )
+              }
             </div>
           </div>
         </div>
