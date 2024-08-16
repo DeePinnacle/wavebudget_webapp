@@ -44,3 +44,20 @@ export const kycsteps = [
         icon: UploadIcon
     }
 ]
+
+export const baseDesign = [
+    'design1',
+    'design2',
+    'design3',
+    'design4',
+    'design5',
+    'design6',
+    'design7',
+    'design8',
+    'design9',
+    'design10',
+    'design11',
+    'design12',
+    'design13',
+    'design14',
+]

@@ -1,7 +1,8 @@
 import Link from "next/link";
 import React from "react";
-import { HomeIcon, LogoIcon, PaymentIcon, WalletIcon, XIcon } from "../icons/icons";
+import { HomeBlurIcon, HomeIcon, LogoIcon, PaymentColoredIcon, PaymentIcon, WalletColoredIcon, WalletIcon, XIcon } from "../icons/icons";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 type overlayProps = {
   overlay: boolean,
@@ -9,20 +10,25 @@ type overlayProps = {
 }
 
 const MobileMenu = ({ overlay, handleOverlay }:overlayProps) => {
+  const pathname = usePathname()
   return (
     <div className="fixed bottom-0 w-full min-h-28 bg-white shadow-2xl shadow-black flex flex-row items-center justify-between p-2">
         <Link
-          href={"#"}
+          href={"/home"}
           className="flex flex-col items-center justify-center gap-y-2 text-sm"
         >
-          <HomeIcon />
+          {
+            pathname === '/home' ? (<HomeIcon />) : (<HomeBlurIcon />)
+          }
           Home
         </Link>
         <Link
-          href={"#"}
+          href={"/payment"}
           className="flex flex-col items-center justify-center gap-y-2 text-sm"
         >
-          <PaymentIcon />
+          {
+            pathname === '/payment' ? (<PaymentColoredIcon />) : <PaymentIcon /> 
+          }
           Payment
         </Link>
         <div className="fixed flex flex-row items-center justify-center bottom-16 left-1/2 -translate-x-1/2 w-20 h-20 rounded-full bg-[#0B7E78] shadow-2xl shadow-gray-300" onClick={handleOverlay}>
@@ -34,14 +40,16 @@ const MobileMenu = ({ overlay, handleOverlay }:overlayProps) => {
         }
       </div>
         <Link
-          href={"#"}
+          href={"/wallet"}
           className="flex flex-col items-center justify-center gap-y-2 text-sm"
         >
-          <WalletIcon />
+          {
+            pathname ==='/wallet' ? (<WalletColoredIcon />) : (<WalletIcon />)
+          }
           Wallet
         </Link>
         <Link
-          href={"#"}
+          href={"/profile"}
           className="flex flex-col items-center justify-center gap-y-2 text-sm"
         >
           <div className="relative w-7 h-7 overflow-hidden rounded-full">

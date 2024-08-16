@@ -15,17 +15,13 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { Autoplay } from 'swiper/modules';
+import InstoreModal from "@/components/ui/instore-modal";
 
 const HomePage = () => {
   const [overlay, setOverlay] = useState(false);
   const handleOverlay = () => {
     setOverlay(!overlay);
   };
-  const handleClickOutside = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    if(e.currentTarget.classList[1] ==="close"){
-      setOverlay(false)
-    }
-  }
   return (
     <>
     <div className="bg-slate-100 w-full min-h-screen pb-16">
@@ -225,61 +221,8 @@ const HomePage = () => {
         </div>
       </div>
     </div>
-    <div
-        className={`${
-          overlay === true ? "block" : "hidden"
-        } close flex flex-row items-center justify-center absolute inset-0 w-full h-[950px] bg-black/20`}
-        onClick = { (e)=>{ handleClickOutside(e) } }
-      >
-        <div className="fixed bottom-44 bg-white w-11/12 min-h-5 rounded-2xl p-3 z-[1000000]">
-          <div className="p-2 my-2 grid grid-cols-2 items-center justify-around gap-3">
-            <div className="bg-[#C6F9F7] border border-solid border-[#0FAEA5] p-2 rounded-xl overflow-hidden">
-              <h2 className="text-[#0B7E78] font-bold ">
-                In store <br /> shopping
-              </h2>
-              <div className="relative w-20 h-20 left-16 top-2 overflow-hidden">
-                <Image
-                  src={"/bag.png"}
-                  alt="bag"
-                  fill
-                  priority
-                  className="object-cover"
-                />
-              </div>
-            </div>
-            <div className="bg-[#F9F4C6] border border-solid border-[#EBDD5C] p-2 rounded-xl overflow-hidden">
-              <h2 className="text-[#C9B817] font-bold ">
-                E-commerce <br /> shopping
-              </h2>
-              <div className="relative w-20 h-20 left-16 top-2 overflow-hidden">
-                <Image
-                  src={"/straight-cart.png"}
-                  alt="bag"
-                  fill
-                  priority
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="bg-[#0B7E78] my-3 p-2 rounded-xl overflow-hidden">
-            <div className="p-2 rounded-xl">
-              <h2 className="font-bold text-white ">
-                Social Trust Number <br />
-              </h2>
-              <div className="relative bottom w-48 h-20 top-5 left-32 overflow-hidden">
-                <Image
-                  src={"/group-user.png"}
-                  alt="bag"
-                  fill
-                  priority
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* instore overlay */}
+      <InstoreModal overlay={ overlay } />
       <MobileMenu overlay={overlay} handleOverlay={ handleOverlay } />
     </>
   );
