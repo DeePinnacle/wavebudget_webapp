@@ -71,7 +71,7 @@ const Cart = () => {
               <div className="relative w-60 h-60 overflow-hidden -mt-44">
                 <Image src={"/resting-man.png"} alt="resting man" fill priority className="object-cover" />
               </div>
-              <p className="text-center text-[#0B7E78]">It looks like you haven't added any items to your cart yet. Browse our instore shopping to add item your cart. Click the link below to add item to cart.!</p>
+              <p className="text-center text-[#0B7E78]">It looks like you haven&apos;t added any items to your cart yet. Browse our instore shopping to add item your cart. Click the link below to add item to cart.!</p>
               <Button className="bg-transparent border border-solid border-[#0B7E78] text-[#0B7E78] my-3 hover:bg-transparent">
                 <Link href={"/instore"}>Shop now</Link>
               </Button>
