@@ -16,7 +16,7 @@ import 'swiper/css/pagination';
 // import required modules
 import { Autoplay } from 'swiper/modules';
 import InstoreModal from "@/components/ui/instore-modal";
-
+import Link from "next/link";
 const HomePage = () => {
   const [overlay, setOverlay] = useState(false);
   const handleOverlay = () => {
@@ -49,34 +49,38 @@ const HomePage = () => {
 
       {/* shopping div */}
       <div className="p-2 my-2 grid grid-cols-2 items-center justify-around gap-3">
-        <div className="bg-[#0B7E78] p-2 rounded-xl overflow-hidden">
-          <h2 className="text-white font-bold ">
-            In store <br /> shopping
-          </h2>
-          <div className="relative w-20 h-20 left-[5.8125rem] top-2 overflow-hidden">
-            <Image
-              src={"/bag.png"}
-              alt="bag"
-              fill
-              priority
-              className="object-cover"
-            />
+        <Link href="/instore">
+          <div className="bg-[#0B7E78] p-2 rounded-xl overflow-hidden">
+            <h2 className="text-white font-bold ">
+              In store <br /> shopping
+            </h2>
+            <div className="relative w-20 h-20 left-[5.8125rem] top-2 overflow-hidden">
+              <Image
+                src={"/bag.png"}
+                alt="bag"
+                fill
+                priority
+                className="object-cover"
+              />
+            </div>
           </div>
-        </div>
-        <div className="bg-[#0B7E78] p-2 rounded-xl overflow-hidden">
-          <h2 className="text-white font-bold ">
-            E-commerce <br /> shopping
-          </h2>
-          <div className="relative w-20 h-20 left-[5.8125rem] top-2 overflow-hidden">
-            <Image
-              src={"/slant-cart.png"}
-              alt="bag"
-              fill
-              priority
-              className="object-cover"
-            />
+        </Link>
+        <Link href={"https://wavemart.wavebudget.com/"}>
+          <div className="bg-[#0B7E78] p-2 rounded-xl overflow-hidden">
+            <h2 className="text-white font-bold ">
+              E-commerce <br /> shopping
+            </h2>
+            <div className="relative w-20 h-20 left-[5.8125rem] top-2 overflow-hidden">
+              <Image
+                src={"/slant-cart.png"}
+                alt="bag"
+                fill
+                priority
+                className="object-cover"
+              />
+            </div>
           </div>
-        </div>
+        </Link>
       </div>
       {/* complete kyc */}
       <div className="bg-white my-3 p-2 w-11/12 mx-auto flex flex-row items-center justify-between rounded-md">
