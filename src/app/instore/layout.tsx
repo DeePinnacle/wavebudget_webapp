@@ -5,7 +5,7 @@ import MobileMenu from "../../components/ui/mobile-menu";
 import { usePathname } from 'next/navigation';
 useState
 
-const layout = ({ children }:PropsWithChildren) => {
+const Layout = ({ children }:PropsWithChildren) => {
     const [overlay, setOverlay] = useState(false);
     const handleOverlay = () => {
       setOverlay(!overlay);
@@ -23,4 +23,4 @@ const layout = ({ children }:PropsWithChildren) => {
   )
 }
 
-export default layout
+export default Layout
