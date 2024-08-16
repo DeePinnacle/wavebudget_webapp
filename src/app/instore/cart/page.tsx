@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from 'next/image'
 import { Button } from "@/components/ui/button";
-const cart = () => {
+const Cart = () => {
   const { carts, removeCartItem } = useCartStore((state) => ({
     carts: state.carts,
     removeCartItem: state.removeCartItem
