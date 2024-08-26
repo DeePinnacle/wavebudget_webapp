@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef, useState } from "react";
-import { useCartStore } from "../../../store/cart-store";
+import { useCartStore } from "../../../store/store";
 import { BackIcon, BlurChecked, CheckedColored, DeleteIcon } from "@/components/icons/icons";
 import { useRouter } from "next/navigation";
 import Link from "next/link";

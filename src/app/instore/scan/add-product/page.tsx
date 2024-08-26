@@ -4,7 +4,7 @@ import { BackIcon, ExclamationIcon } from "../../../../components/icons/icons";
 import { Button } from "../../../../components/ui/button";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { useCartStore } from "../../../../store/cart-store"
+import { useCartStore } from "../../../../store/store"
 
 type FormField = "product" | "quantity" | "price";
 

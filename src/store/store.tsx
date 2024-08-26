@@ -7,6 +7,13 @@ interface CartItem {
     quantity: number
 }
 
+interface CartegoriesItem{
+    id: number,
+    name: string,
+    percentage: string,
+    image: string
+}
+
 interface PersistConfig {
     name: string
 }
@@ -16,6 +23,24 @@ interface CartState {
     carts: CartItem[],
     addToCart: (cart: CartItem) => void,
     removeCartItem: (id: number) => void ,
+}
+
+// state and action for categories
+interface CartegoriesState{
+    categories: CartegoriesItem[],
+    addCategory: (category: CartegoriesItem) => void
+}
+
+// overlay config
+interface overlayConfig {
+    overlay: Boolean,
+    openOverlay: () => void,
+    closeOverlay: () => void
+}
+
+interface userStateConfig {
+    user: string,
+    handleState: (newUser: string) => void
 }
 
 export const useCartStore = create<CartState>()(
@@ -44,4 +69,31 @@ export const useCartStore = create<CartState>()(
     }),{
         name: "cart-storage"
     })
+    )
+
+    // user store
+    export const UserState = create<userStateConfig>((set)=>({
+        user: 'vendor',
+        // handleState: (newUser: string) => set({ users: newUser}) one way
+        handleState: (newUser: string) => set((state)=>({ user: newUser }))
+    }))
+
+    // overlay store 
+    export const OverlayState = create<overlayConfig>((set)=>({
+        overlay: false,
+        openOverlay: () => set({ overlay: true }),
+        closeOverlay: () => set({ overlay: false })
+    }))
+
+    // category store
+    export const CategoriesState = create<CartegoriesState>()(
+        persist(
+            (set)=>({
+                categories: [],
+                addCategory: (categories) => set((state)=>({ categories: [...state.categories, categories]}))
+            }),
+            {
+                name: 'categories-store'
+            }
+        )
     )
