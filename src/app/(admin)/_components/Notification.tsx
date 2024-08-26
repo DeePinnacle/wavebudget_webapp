@@ -408,7 +408,7 @@ const Notification = () => {
                   setBtnID("");
                 }}
               >
-                No, don't delete
+                No, don&apos;t delete
               </Button>
             </div>
           </div>
