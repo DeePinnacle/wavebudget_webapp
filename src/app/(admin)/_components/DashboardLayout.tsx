@@ -17,6 +17,7 @@ import {
   ColoredFeedbackIcon,
   ColoredVendorIcon,
   ColoredBuyerIcon,
+  GrayNotificationIcon,
 } from "@/components/icons/icons";
 import { UserState } from "@/store/store";
 import Image from "next/image";
@@ -149,7 +150,7 @@ const DashboardLayout = ({
                 mode === 'notification' ? (
                   <ColoredNotificationIcon />
                 ): (
-                  <NotificationIcon />
+                  <GrayNotificationIcon />
                 )
               }
               <span className={`${ mode ==='notification' ? 'text-[#0B7E78]': 'text-[#858585]' } text-sm`}>

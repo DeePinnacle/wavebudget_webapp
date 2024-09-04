@@ -186,7 +186,7 @@ const Dashboard = () => {
             </Button>
           </div>
           <div className="my-3 p-2 flex flex-row gap-4">
-            <div className="relative w-3/5 h-48">
+            <div className="relative w-48 h-48 rounded-full overflow-hidden">
                 <Image src={"/Pie.png"} alt="pie chart" fill />
             </div>
             <div>

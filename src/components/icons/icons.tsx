@@ -2782,3 +2782,11 @@ export const AddPlusIcon = ({ className }:iconProps) => (
 </svg>
 
 )
+
+export const GrayNotificationIcon = ({ className }:iconProps) => (
+  <svg className={cn(className)} width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.18663 9.84656C2.04487 10.7759 2.67869 11.421 3.45472 11.7424C6.42989 12.975 10.5702 12.975 13.5453 11.7424C14.3214 11.421 14.9552 10.7759 14.8134 9.84656C14.7263 9.27543 14.2955 8.79983 13.9763 8.33543C13.5582 7.7197 13.5167 7.04803 13.5166 6.3335C13.5166 3.57207 11.2706 1.3335 8.50002 1.3335C5.72944 1.3335 3.48344 3.57207 3.48344 6.3335C3.48337 7.04803 3.44183 7.7197 3.02376 8.33543C2.70458 8.79983 2.27376 9.27543 2.18663 9.84656Z" stroke="#858585" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5.83331 12.6665C6.13897 13.8166 7.21698 14.6665 8.49998 14.6665C9.78298 14.6665 10.861 13.8166 11.1666 12.6665" stroke="#858585" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+)

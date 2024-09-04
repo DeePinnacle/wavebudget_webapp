@@ -3,6 +3,10 @@ import Image1 from '../../public/agent.png'
 import Image2 from '../../public/buyer.png'
 import Image3 from '../../public/merchant.png'
 
+import Rice from '../../public/Rice.png'
+import Laptop from '../../public/laptop.png'
+import Shoe from '../../public/Shoe.png'
+
 import {
     UserIconRounded,
     BriefcaseIcon,
@@ -130,4 +134,131 @@ export const ScheduleMesages = [
         subject: 'Customers',
         body: 'Shop local, score big deals. Uncover the best businesses around you, find what need, and enjoy in-store shopping convenience. Shop local, score big deals. Uncover the best businesses around you, find what you need, and enjoy in-store shopping convenience.'
     }
+]
+
+export const RiceData = [
+    {
+        image: Rice,
+        category: 'Food',
+        commission: '10%'
+    },
+    {
+        image: Rice,
+        category: 'Food',
+        commission: '10%'
+    },
+    {
+        image: Rice,
+        category: 'Food',
+        commission: '10%'
+    },
+    {
+        image: Rice,
+        category: 'Food',
+        commission: '10%'
+    },
+    {
+        image: Rice,
+        category: 'Food',
+        commission: '10%'
+    },
+    {
+        image: Rice,
+        category: 'Food',
+        commission: '10%'
+    },
+    {
+        image: Rice,
+        category: 'Food',
+        commission: '10%'
+    },
+    {
+        image: Rice,
+        category: 'Food',
+        commission: '10%'
+    },
+]
+export const LaptopData = [
+    {
+        image: Laptop,
+        category: 'Tech Gadgets',
+        commission: '10%'
+    },
+    {
+        image: Laptop,
+        category: 'Tech Gadgets',
+        commission: '10%'
+    },
+    {
+        image: Laptop,
+        category: 'Tech Gadgets',
+        commission: '10%'
+    },
+    {
+        image: Laptop,
+        category: 'Tech Gadgets',
+        commission: '10%'
+    },
+    {
+        image: Laptop,
+        category: 'Tech Gadgets',
+        commission: '10%'
+    },
+    {
+        image: Laptop,
+        category: 'Tech Gadgets',
+        commission: '10%'
+    },
+    {
+        image: Laptop,
+        category: 'Tech Gadgets',
+        commission: '10%'
+    },
+    {
+        image: Laptop,
+        category: 'Tech Gadgets',
+        commission: '10%'
+    },
+]
+export const Accessories = [
+    {
+        image: Shoe,
+        category: 'Accessories',
+        commission: '10%'
+    },
+    {
+        image: Shoe,
+        category: 'Accessories',
+        commission: '10%'
+    },
+    {
+        image: Shoe,
+        category: 'Accessories',
+        commission: '10%'
+    },
+    {
+        image: Shoe,
+        category: 'Accessories',
+        commission: '10%'
+    },
+    {
+        image: Shoe,
+        category: 'Accessories',
+        commission: '10%'
+    },
+    {
+        image: Shoe,
+        category: 'Accessories',
+        commission: '10%'
+    },
+    {
+        image: Shoe,
+        category: 'Accessories',
+        commission: '10%'
+    },
+    {
+        image: Shoe,
+        category: 'Accessories',
+        commission: '10%'
+    },
 ]

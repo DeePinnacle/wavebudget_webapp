@@ -17,6 +17,10 @@ import { Button } from "@/components/ui/button";
 import Overlay from "./overlay";
 import { OverlayState } from "@/store/store";
 
+import { RiceData } from "@/config/data";
+import { LaptopData } from "@/config/data";
+import { Accessories } from "@/config/data";
+
 import MobileImage from "../../../../public/banner-img.png";
 
 type FormField = "image" | "name" | "category";
@@ -1061,571 +1065,95 @@ const ActionPanel = () => {
               <p className="mb-5">Current categories</p>
               <div className="flex flex-col gap-3 h-[37.5rem] overflow-y-auto message-slider">
                 <div className="grid grid-cols-8 gap-3 my-2">
-                  <div className="w-full flex flex-col items-center justify-center p-3 h-full">
-                    <div className="w-20 h-20 bg-[#DBE1E1] rounded-full relative overflow-hidden">
-                      <Image
-                        src={"/rice.png"}
-                        alt="rice-image"
-                        fill
-                        priority
-                        className="object-cover"
-                      />
+                  {
+                    RiceData.map((data, index)=>(
+                    <div key={ index } className="w-full flex flex-col items-center justify-center p-3 h-full">
+                      <div className="w-20 h-20 bg-[#DBE1E1] rounded-full relative overflow-hidden">
+                        <Image
+                          src={data.image}
+                          alt="rice-image"
+                          fill
+                          priority
+                          className="object-cover"
+                        />
+                      </div>
+                      <p className="my-2 font-semibold">{ data.category }</p>
+                      <p className="text-xs text-[#858585] mb-2">
+                        Commission{" "}
+                        <span className="font-semibold text-black">{ data.commission }</span>
+                      </p>
+                      <Button
+                        className="w-full border border-solid border-[#0B7E78] text-[#0B7E78] hover:bg-transparent hover:text-[#0B7E78]"
+                        variant={"ghost"}
+                        onClick={handleEdit}
+                      >
+                        Edit
+                      </Button>
                     </div>
-                    <p className="my-2 font-semibold">Food</p>
-                    <p className="text-xs text-[#858585] mb-2">
-                      Commission{" "}
-                      <span className="font-semibold text-black">10%</span>
-                    </p>
-                    <Button
-                      className="w-full border border-solid border-[#0B7E78] text-[#0B7E78] hover:bg-transparent hover:text-[#0B7E78]"
-                      variant={"ghost"}
-                      onClick={handleEdit}
-                    >
-                      Edit
-                    </Button>
-                  </div>
-                  <div className="w-full flex flex-col items-center justify-center p-3 h-full">
-                    <div className="w-20 h-20 bg-[#DBE1E1] rounded-full relative overflow-hidden">
-                      <Image
-                        src={"/rice.png"}
-                        alt="rice-image"
-                        fill
-                        priority
-                        className="object-cover"
-                      />
-                    </div>
-                    <p className="my-2 font-semibold">Food</p>
-                    <p className="text-xs text-[#858585] mb-2">
-                      Commission{" "}
-                      <span className="font-semibold text-black">10%</span>
-                    </p>
-                    <Button
-                      className="w-full border border-solid border-[#0B7E78] text-[#0B7E78] hover:bg-transparent hover:text-[#0B7E78]"
-                      variant={"ghost"}
-                    >
-                      Edit
-                    </Button>
-                  </div>
-                  <div className="w-full flex flex-col items-center justify-center p-full">
-                    <div className="w-20 h-20 bg-[#DBE1E1] rounded-full relative overflow-hidden">
-                      <Image
-                        src={"/rice.png"}
-                        alt="rice-image"
-                        fill
-                        priority
-                        className="object-cover"
-                      />
-                    </div>
-                    <p className="my-2 font-semibold">Food</p>
-                    <p className="text-xs text-[#858585] mb-2">
-                      Commission{" "}
-                      <span className="font-semibold text-black">10%</span>
-                    </p>
-                    <Button
-                      className="w-full border border-solid border-[#0B7E78] text-[#0B7E78] hover:bg-transparent hover:text-[#0B7E78]"
-                      variant={"ghost"}
-                    >
-                      Edit
-                    </Button>
-                  </div>
-                  <div className="w-full flex flex-col items-center justify-center p-3 h-full">
-                    <div className="w-20 h-20 bg-[#DBE1E1] rounded-full relative overflow-hidden">
-                      <Image
-                        src={"/rice.png"}
-                        alt="rice-image"
-                        fill
-                        priority
-                        className="object-cover"
-                      />
-                    </div>
-                    <p className="my-2 font-semibold">Food</p>
-                    <p className="text-xs text-[#858585] mb-2">
-                      Commission{" "}
-                      <span className="font-semibold text-black">10%</span>
-                    </p>
-                    <Button
-                      className="w-full border border-solid border-[#0B7E78] text-[#0B7E78] hover:bg-transparent hover:text-[#0B7E78]"
-                      variant={"ghost"}
-                    >
-                      Edit
-                    </Button>
-                  </div>
-                  <div className="w-full flex flex-col items-center justify-center p-3 h-full">
-                    <div className="w-20 h-20 bg-[#DBE1E1] rounded-full relative overflow-hidden">
-                      <Image
-                        src={"/rice.png"}
-                        alt="rice-image"
-                        fill
-                        priority
-                        className="object-cover"
-                      />
-                    </div>
-                    <p className="my-2 font-semibold">Food</p>
-                    <p className="text-xs text-[#858585] mb-2">
-                      Commission{" "}
-                      <span className="font-semibold text-black">10%</span>
-                    </p>
-                    <Button
-                      className="w-full border border-solid border-[#0B7E78] text-[#0B7E78] hover:bg-transparent hover:text-[#0B7E78]"
-                      variant={"ghost"}
-                    >
-                      Edit
-                    </Button>
-                  </div>
-                  <div className="w-full flex flex-col items-center justify-center p-3 h-full">
-                    <div className="w-20 h-20 bg-[#DBE1E1] rounded-full relative overflow-hidden">
-                      <Image
-                        src={"/rice.png"}
-                        alt="rice-image"
-                        fill
-                        priority
-                        className="object-cover"
-                      />
-                    </div>
-                    <p className="my-2 font-semibold">Food</p>
-                    <p className="text-xs text-[#858585] mb-2">
-                      Commission{" "}
-                      <span className="font-semibold text-black">10%</span>
-                    </p>
-                    <Button
-                      className="w-full border border-solid border-[#0B7E78] text-[#0B7E78] hover:bg-transparent hover:text-[#0B7E78]"
-                      variant={"ghost"}
-                    >
-                      Edit
-                    </Button>
-                  </div>
-                  <div className="w-full flex flex-col items-center justify-center p-3 h-full">
-                    <div className="w-20 h-20 bg-[#DBE1E1] rounded-full relative overflow-hidden">
-                      <Image
-                        src={"/rice.png"}
-                        alt="rice-image"
-                        fill
-                        priority
-                        className="object-cover"
-                      />
-                    </div>
-                    <p className="my-2 font-semibold">Food</p>
-                    <p className="text-xs text-[#858585] mb-2">
-                      Commission{" "}
-                      <span className="font-semibold text-black">10%</span>
-                    </p>
-                    <Button
-                      className="w-full border border-solid border-[#0B7E78] text-[#0B7E78] hover:bg-transparent hover:text-[#0B7E78]"
-                      variant={"ghost"}
-                    >
-                      Edit
-                    </Button>
-                  </div>
-                  <div className="w-full flex flex-col items-center justify-center p-3 h-full">
-                    <div className="w-20 h-20 bg-[#DBE1E1] rounded-full relative overflow-hidden">
-                      <Image
-                        src={"/rice.png"}
-                        alt="rice-image"
-                        fill
-                        priority
-                        className="object-cover"
-                      />
-                    </div>
-                    <p className="my-2 font-semibold">Food</p>
-                    <p className="text-xs text-[#858585] mb-2">
-                      Commission{" "}
-                      <span className="font-semibold text-black">10%</span>
-                    </p>
-                    <Button
-                      className="w-full border border-solid border-[#0B7E78] text-[#0B7E78] hover:bg-transparent hover:text-[#0B7E78]"
-                      variant={"ghost"}
-                    >
-                      Edit
-                    </Button>
-                  </div>
+                    ))
+                  }
                 </div>
                 <div className="grid grid-cols-8 gap-3 my-2">
-                  <div className="w-full flex flex-col items-center justify-center p-3 h-full">
-                    <div className="w-20 h-20 bg-[#DBE1E1] rounded-full relative overflow-hidden">
-                      <Image
-                        src={"/laptop.png"}
-                        alt="laptop-image"
-                        fill
-                        priority
-                        className="object-cover"
-                      />
+                  {
+                    LaptopData.map((data, index)=>(
+                    <div key={ index } className="w-full flex flex-col items-center justify-center p-3 h-full">
+                      <div className="w-20 h-20 bg-[#DBE1E1] rounded-full relative overflow-hidden">
+                        <Image
+                          src={data.image}
+                          alt="laptop-image"
+                          fill
+                          priority
+                          className="object-cover"
+                        />
+                      </div>
+                      <p className="my-2 font-semibold text-center text-sm">
+                        { data.category }
+                      </p>
+                      <p className="text-xs text-[#858585] text-center mb-2">
+                        Commission{" "}
+                        <span className="font-semibold text-black">{ data.commission }</span>
+                      </p>
+                      <Button
+                          className="w-full border border-solid border-[#0B7E78] text-[#0B7E78] hover:bg-transparent hover:text-[#0B7E78]"
+                          variant={"ghost"}
+                          onClick={handleEdit}
+                        >
+                          Edit
+                        </Button>
                     </div>
-                    <p className="my-2 font-semibold text-center text-sm">
-                      Tech Gadgets
-                    </p>
-                    <p className="text-xs text-[#858585] text-center mb-2">
-                      Commission{" "}
-                      <span className="font-semibold text-black">10%</span>
-                    </p>
-                    <Button
-                      className="w-full border border-solid border-[#0B7E78] text-[#0B7E78] hover:bg-transparent hover:text-[#0B7E78]"
-                      variant={"ghost"}
-                    >
-                      Edit
-                    </Button>
-                  </div>
-                  <div className="w-full flex flex-col items-center justify-center p-3 h-full">
-                    <div className="w-20 h-20 bg-[#DBE1E1] rounded-full relative overflow-hidden">
-                      <Image
-                        src={"/laptop.png"}
-                        alt="laptop-image"
-                        fill
-                        priority
-                        className="object-cover"
-                      />
-                    </div>
-                    <p className="my-2 font-semibold text-center text-sm">
-                      Tech Gadgets
-                    </p>
-                    <p className="text-xs text-[#858585] text-center mb-2">
-                      Commission{" "}
-                      <span className="font-semibold text-black">10%</span>
-                    </p>
-                    <Button
-                      className="w-full border border-solid border-[#0B7E78] text-[#0B7E78] hover:bg-transparent hover:text-[#0B7E78]"
-                      variant={"ghost"}
-                    >
-                      Edit
-                    </Button>
-                  </div>
-                  <div className="w-full flex flex-col items-center justify-center p-full">
-                    <div className="w-20 h-20 bg-[#DBE1E1] rounded-full relative overflow-hidden">
-                      <Image
-                        src={"/laptop.png"}
-                        alt="laptop-image"
-                        fill
-                        priority
-                        className="object-cover"
-                      />
-                    </div>
-                    <p className="my-2 font-semibold text-center text-sm">
-                      Tech Gadgets
-                    </p>
-                    <p className="text-xs text-[#858585] text-center mb-2">
-                      Commission{" "}
-                      <span className="font-semibold text-black">10%</span>
-                    </p>
-                    <Button
-                      className="w-full border border-solid border-[#0B7E78] text-[#0B7E78] hover:bg-transparent hover:text-[#0B7E78]"
-                      variant={"ghost"}
-                    >
-                      Edit
-                    </Button>
-                  </div>
-                  <div className="w-full flex flex-col items-center justify-center p-3 h-full">
-                    <div className="w-20 h-20 bg-[#DBE1E1] rounded-full relative overflow-hidden">
-                      <Image
-                        src={"/laptop.png"}
-                        alt="laptop-image"
-                        fill
-                        priority
-                        className="object-cover"
-                      />
-                    </div>
-                    <p className="my-2 font-semibold text-center text-sm">
-                      Tech Gadgets
-                    </p>
-                    <p className="text-xs text-[#858585] text-center mb-2">
-                      Commission{" "}
-                      <span className="font-semibold text-black">10%</span>
-                    </p>
-                    <Button
-                      className="w-full border border-solid border-[#0B7E78] text-[#0B7E78] hover:bg-transparent hover:text-[#0B7E78]"
-                      variant={"ghost"}
-                    >
-                      Edit
-                    </Button>
-                  </div>
-                  <div className="w-full flex flex-col items-center justify-center p-3 h-full">
-                    <div className="w-20 h-20 bg-[#DBE1E1] rounded-full relative overflow-hidden">
-                      <Image
-                        src={"/laptop.png"}
-                        alt="laptop-image"
-                        fill
-                        priority
-                        className="object-cover"
-                      />
-                    </div>
-                    <p className="my-2 font-semibold text-center text-sm">
-                      Tech Gadgets
-                    </p>
-                    <p className="text-xs text-[#858585] text-center mb-2">
-                      Commission{" "}
-                      <span className="font-semibold text-black">10%</span>
-                    </p>
-                    <Button
-                      className="w-full border border-solid border-[#0B7E78] text-[#0B7E78] hover:bg-transparent hover:text-[#0B7E78]"
-                      variant={"ghost"}
-                    >
-                      Edit
-                    </Button>
-                  </div>
-                  <div className="w-full flex flex-col items-center justify-center p-3 h-full">
-                    <div className="w-20 h-20 bg-[#DBE1E1] rounded-full relative overflow-hidden">
-                      <Image
-                        src={"/laptop.png"}
-                        alt="laptop-image"
-                        fill
-                        priority
-                        className="object-cover"
-                      />
-                    </div>
-                    <p className="my-2 font-semibold text-center text-sm">
-                      Tech Gadgets
-                    </p>
-                    <p className="text-xs text-[#858585] text-center mb-2">
-                      Commission{" "}
-                      <span className="font-semibold text-black">10%</span>
-                    </p>
-                    <Button
-                      className="w-full border border-solid border-[#0B7E78] text-[#0B7E78] hover:bg-transparent hover:text-[#0B7E78]"
-                      variant={"ghost"}
-                    >
-                      Edit
-                    </Button>
-                  </div>
-                  <div className="w-full flex flex-col items-center justify-center p-3 h-full">
-                    <div className="w-20 h-20 bg-[#DBE1E1] rounded-full relative overflow-hidden">
-                      <Image
-                        src={"/laptop.png"}
-                        alt="laptop-image"
-                        fill
-                        priority
-                        className="object-cover"
-                      />
-                    </div>
-                    <p className="my-2 font-semibold text-center text-sm">
-                      Tech Gadgets
-                    </p>
-                    <p className="text-xs text-[#858585] text-center mb-2">
-                      Commission{" "}
-                      <span className="font-semibold text-black">10%</span>
-                    </p>
-                    <Button
-                      className="w-full border border-solid border-[#0B7E78] text-[#0B7E78] hover:bg-transparent hover:text-[#0B7E78]"
-                      variant={"ghost"}
-                    >
-                      Edit
-                    </Button>
-                  </div>
-                  <div className="w-full flex flex-col items-center justify-center p-3 h-full">
-                    <div className="w-20 h-20 bg-[#DBE1E1] rounded-full relative overflow-hidden">
-                      <Image
-                        src={"/laptop.png"}
-                        alt="laptop-image"
-                        fill
-                        priority
-                        className="object-cover"
-                      />
-                    </div>
-                    <p className="my-2 font-semibold text-center text-sm">
-                      Tech Gadgets
-                    </p>
-                    <p className="text-xs text-[#858585] text-center mb-2">
-                      Commission{" "}
-                      <span className="font-semibold text-black">10%</span>
-                    </p>
-                    <Button
-                      className="w-full border border-solid border-[#0B7E78] text-[#0B7E78] hover:bg-transparent hover:text-[#0B7E78]"
-                      variant={"ghost"}
-                    >
-                      Edit
-                    </Button>
-                  </div>
+                    ))
+                  }
                 </div>
                 <div className="grid grid-cols-8 gap-3 my-2">
-                  <div className="w-full flex flex-col items-center justify-center p-3 h-full">
-                    <div className="w-20 h-20 bg-[#DBE1E1] rounded-full relative overflow-hidden">
-                      <Image
-                        src={"/shoe.png"}
-                        alt="shoe-image"
-                        fill
-                        priority
-                        className="object-cover"
-                      />
+                  {
+                    Accessories.map((data, index)=>(
+                    <div key={ index } className="w-full flex flex-col items-center justify-center p-3 h-full">
+                      <div className="w-20 h-20 bg-[#DBE1E1] rounded-full relative overflow-hidden">
+                        <Image
+                          src={data.image}
+                          alt="shoe-image"
+                          fill
+                          priority
+                          className="object-cover"
+                        />
+                      </div>
+                      <p className="my-2 font-semibold text-center text-sm">
+                        { data.category }
+                      </p>
+                      <p className="text-xs text-[#858585] text-center mb-2">
+                        Commission{" "}
+                        <span className="font-semibold text-black">{ data.commission }</span>
+                      </p>
+                      <Button
+                            className="w-full border border-solid border-[#0B7E78] text-[#0B7E78] hover:bg-transparent hover:text-[#0B7E78]"
+                            variant={"ghost"}
+                            onClick={handleEdit}
+                          >
+                            Edit
+                          </Button>
                     </div>
-                    <p className="my-2 font-semibold text-center text-sm">
-                      Accessories
-                    </p>
-                    <p className="text-xs text-[#858585] text-center mb-2">
-                      Commission{" "}
-                      <span className="font-semibold text-black">10%</span>
-                    </p>
-                    <Button
-                      className="w-full border border-solid border-[#0B7E78] text-[#0B7E78] hover:bg-transparent hover:text-[#0B7E78]"
-                      variant={"ghost"}
-                    >
-                      Edit
-                    </Button>
-                  </div>
-                  <div className="w-full flex flex-col items-center justify-center p-3 h-full">
-                    <div className="w-20 h-20 bg-[#DBE1E1] rounded-full relative overflow-hidden">
-                      <Image
-                        src={"/shoe.png"}
-                        alt="shoe-image"
-                        fill
-                        priority
-                        className="object-cover"
-                      />
-                    </div>
-                    <p className="my-2 font-semibold text-center text-sm">
-                      Accessories
-                    </p>
-                    <p className="text-xs text-[#858585] text-center mb-2">
-                      Commission{" "}
-                      <span className="font-semibold text-black">10%</span>
-                    </p>
-                    <Button
-                      className="w-full border border-solid border-[#0B7E78] text-[#0B7E78] hover:bg-transparent hover:text-[#0B7E78]"
-                      variant={"ghost"}
-                    >
-                      Edit
-                    </Button>
-                  </div>
-                  <div className="w-full flex flex-col items-center justify-center p-full">
-                    <div className="w-20 h-20 bg-[#DBE1E1] rounded-full relative overflow-hidden">
-                      <Image
-                        src={"/shoe.png"}
-                        alt="shoe-image"
-                        fill
-                        priority
-                        className="object-cover"
-                      />
-                    </div>
-                    <p className="my-2 font-semibold text-center text-sm">
-                      Accessories
-                    </p>
-                    <p className="text-xs text-[#858585] text-center mb-2">
-                      Commission{" "}
-                      <span className="font-semibold text-black">10%</span>
-                    </p>
-                    <Button
-                      className="w-full border border-solid border-[#0B7E78] text-[#0B7E78] hover:bg-transparent hover:text-[#0B7E78]"
-                      variant={"ghost"}
-                    >
-                      Edit
-                    </Button>
-                  </div>
-                  <div className="w-full flex flex-col items-center justify-center p-3 h-full">
-                    <div className="w-20 h-20 bg-[#DBE1E1] rounded-full relative overflow-hidden">
-                      <Image
-                        src={"/shoe.png"}
-                        alt="shoe-image"
-                        fill
-                        priority
-                        className="object-cover"
-                      />
-                    </div>
-                    <p className="my-2 font-semibold text-center text-sm">
-                      Accessories
-                    </p>
-                    <p className="text-xs text-[#858585] text-center mb-2">
-                      Commission{" "}
-                      <span className="font-semibold text-black">10%</span>
-                    </p>
-                    <Button
-                      className="w-full border border-solid border-[#0B7E78] text-[#0B7E78] hover:bg-transparent hover:text-[#0B7E78]"
-                      variant={"ghost"}
-                    >
-                      Edit
-                    </Button>
-                  </div>
-                  <div className="w-full flex flex-col items-center justify-center p-3 h-full">
-                    <div className="w-20 h-20 bg-[#DBE1E1] rounded-full relative overflow-hidden">
-                      <Image
-                        src={"/shoe.png"}
-                        alt="shoe-image"
-                        fill
-                        priority
-                        className="object-cover"
-                      />
-                    </div>
-                    <p className="my-2 font-semibold text-center text-sm">
-                      Accessories
-                    </p>
-                    <p className="text-xs text-[#858585] text-center mb-2">
-                      Commission{" "}
-                      <span className="font-semibold text-black">10%</span>
-                    </p>
-                    <Button
-                      className="w-full border border-solid border-[#0B7E78] text-[#0B7E78] hover:bg-transparent hover:text-[#0B7E78]"
-                      variant={"ghost"}
-                    >
-                      Edit
-                    </Button>
-                  </div>
-                  <div className="w-full flex flex-col items-center justify-center p-3 h-full">
-                    <div className="w-20 h-20 bg-[#DBE1E1] rounded-full relative overflow-hidden">
-                      <Image
-                        src={"/shoe.png"}
-                        alt="shoe-image"
-                        fill
-                        priority
-                        className="object-cover"
-                      />
-                    </div>
-                    <p className="my-2 font-semibold text-center text-sm">
-                      Accessories
-                    </p>
-                    <p className="text-xs text-[#858585] text-center mb-2">
-                      Commission{" "}
-                      <span className="font-semibold text-black">10%</span>
-                    </p>
-                    <Button
-                      className="w-full border border-solid border-[#0B7E78] text-[#0B7E78] hover:bg-transparent hover:text-[#0B7E78]"
-                      variant={"ghost"}
-                    >
-                      Edit
-                    </Button>
-                  </div>
-                  <div className="w-full flex flex-col items-center justify-center p-3 h-full">
-                    <div className="w-20 h-20 bg-[#DBE1E1] rounded-full relative overflow-hidden">
-                      <Image
-                        src={"/shoe.png"}
-                        alt="shoe-image"
-                        fill
-                        priority
-                        className="object-cover"
-                      />
-                    </div>
-                    <p className="my-2 font-semibold text-center text-sm">
-                      Accessories
-                    </p>
-                    <p className="text-xs text-[#858585] text-center mb-2">
-                      Commission{" "}
-                      <span className="font-semibold text-black">10%</span>
-                    </p>
-                    <Button
-                      className="w-full border border-solid border-[#0B7E78] text-[#0B7E78] hover:bg-transparent hover:text-[#0B7E78]"
-                      variant={"ghost"}
-                    >
-                      Edit
-                    </Button>
-                  </div>
-                  <div className="w-full flex flex-col items-center justify-center p-3 h-full">
-                    <div className="w-20 h-20 bg-[#DBE1E1] rounded-full relative overflow-hidden">
-                      <Image
-                        src={"/shoe.png"}
-                        alt="shoe-image"
-                        fill
-                        priority
-                        className="object-cover"
-                      />
-                    </div>
-                    <p className="my-2 font-semibold text-center text-sm">
-                      Accessories
-                    </p>
-                    <p className="text-xs text-[#858585] text-center mb-2">
-                      Commission{" "}
-                      <span className="font-semibold text-black">10%</span>
-                    </p>
-                    <Button
-                      className="w-full border border-solid border-[#0B7E78] text-[#0B7E78] hover:bg-transparent hover:text-[#0B7E78]"
-                      variant={"ghost"}
-                    >
-                      Edit
-                    </Button>
-                  </div>
+                    ))
+                  }
                 </div>
               </div>
             </div>
