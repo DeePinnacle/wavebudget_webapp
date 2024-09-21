@@ -2,16 +2,16 @@
 import Image from "next/image";
 import React, { use, useEffect, useState } from "react";
 
-import { kycsteps } from "../../../config/data";
-import { Button } from "../../../components/ui/button";
-import Modal from "../_components/modal";
+import { kycsteps } from "../../../../config/data";
+import { Button } from "../../../../components/ui/button";
+import Modal from "../../_components/modal";
 import {
   BlurChecked,
   CheckedColored,
   GreenLogoIcon,
   StrokeIcon,
   UploadImageIcon,
-} from "../../../components/icons/icons";
+} from "../../../../components/icons/icons";
 import Link from "next/link";
 
 const VerifyKYC = () => {
@@ -677,7 +677,7 @@ const VerifyKYC = () => {
                     <h2 className="font-bold text-xl text-center mt-6">Job Weldone</h2>
                     <p className="text-center text-[#858585] my-3">A notification about your veification would be sent to you in about 3-5 working days.</p>
                     <Button className="w-full bg-[#0B7E78] hover:bg-[#0B7E78]" size={"lg"} asChild>
-                      <Link href={"/home"}>Back to home</Link>
+                      <Link href={"/home/buyer"}>Back to home</Link>
                     </Button>
                   </div>
               </div>

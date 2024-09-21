@@ -159,7 +159,7 @@ const Payment = () => {
                     </div>
                     <p className="text-right font-semibold text-[#858585]">Unresolved debt <span className="font-bold text-black"> N10,000</span></p>
                 </div>
-                <Button className="w-full bg-[#0B7E78] py-5 hover:bg-[#0B7E78]" size={"lg"}>Resolve debt now</Button>
+                <Button className="w-full bg-[#0B7E78] py-5 hover:bg-[#0B7E78]" size={"lg"} onClick={ (e)=> { e.preventDefault(); e.stopPropagation()} }>Resolve debt now</Button>
             </div>
         </div>
       </div>

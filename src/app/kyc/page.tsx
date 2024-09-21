@@ -17,7 +17,13 @@ const KYC = () => {
 
     const handleProceed = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) =>{
         e.preventDefault()
-        router.push('/kyc/verify-kyc')
+        if(role ==='Buyer' ){
+            router.push('/kyc/verify-kyc/buyer')
+        }
+
+        if(role ==='Merchant' ){
+            router.push('/kyc/verify-kyc/vendor')
+        }
     }
 
   return (

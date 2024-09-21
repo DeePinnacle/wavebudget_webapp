@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import { BellIcon, NotificationIcon } from "../../components/icons/icons";
-import MobileMenu from "../../components/ui/mobile-menu";
+import { BellIcon, NotificationIcon } from "../../../components/icons/icons";
+import MobileMenu from "../../../components/ui/mobile-menu";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';

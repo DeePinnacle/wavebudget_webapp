@@ -14,11 +14,11 @@ const MobileMenu = ({ overlay, handleOverlay }:overlayProps) => {
   return (
     <div className="fixed bottom-0 w-full min-h-28 bg-white shadow-2xl shadow-black flex flex-row items-center justify-between p-2">
         <Link
-          href={"/home"}
+          href={"/home/buyer"}
           className="flex flex-col items-center justify-center gap-y-2 text-sm"
         >
           {
-            pathname === '/home' ? (<HomeIcon />) : (<HomeBlurIcon />)
+            pathname === '/home/buyer' ? (<HomeIcon />) : (<HomeBlurIcon />)
           }
           Home
         </Link>
