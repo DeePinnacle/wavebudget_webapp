@@ -27,6 +27,7 @@ const HomePage = () => {
     <div className="bg-slate-100 w-full min-h-screen pb-16">
       {/* notication header */}
       <div className="flex flex-row items-center justify-between py-7 px-3">
+        <Link href="/profile">
         <div className="flex flex-row gap-2">
           <div className="relative w-14 h-14 rounded-full overflow-hidden">
             <Image
@@ -42,6 +43,7 @@ const HomePage = () => {
             <p className="text-[#010E0D] font-bold">Wisdom Umanah</p>
           </div>
         </div>
+        </Link>
         <div className="bg-white w-12 h-12 rounded-full flex flex-row items-center justify-center">
           <NotificationIcon />
         </div>

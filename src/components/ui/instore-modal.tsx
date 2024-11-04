@@ -57,7 +57,7 @@ const InstorModal = ({ overlay }: overlayProps) =>{
           <div className="bg-[#0B7E78] my-3 p-2 rounded-xl overflow-hidden" onClick={ handleSTN }>
             <div className="p-2 rounded-xl">
               <h2 className="font-bold text-white ">
-                Social Trust Number <br />
+                Social Trust Network <br />
               </h2>
               <div className="relative bottom w-48 h-20 top-5 left-32 overflow-hidden">
                 <Image

@@ -55,7 +55,7 @@ const MobileMenu = ({ overlay, handleOverlay }:overlayProps) => {
           <div className="relative w-7 h-7 overflow-hidden rounded-full">
             <Image src={"/user.png"} alt="user-image" fill priority className="object-cover" />
           </div>
-          Profile
+          Account
         </Link>
       {/* <div className="p-2 w-40 h-20 flex flex-row items-center gap-4">
       </div> */}

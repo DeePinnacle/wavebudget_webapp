@@ -67,6 +67,14 @@ const Profile = () => {
                 </div>
                 <p className="flex flex-row items-center gap-2 font-semibold text-lg text-[#D1D1D1]">Buyer</p>
             </div>
+            <Link href={"/profile/orders"} className="cursor-pointer">
+                <div className="w-full mt-6  bg-white mb-2 px-2 py-6 border border-solid border-[#ebecec] flex flex-row items-center justify-between gap-2 rounded-lg">
+                    <div className="flex flex-row items-center gap-3 text-lg">
+                        <PrivacyIcon className={"w-7 h-7"} />
+                        <p className="font-semibold">My Orders</p>
+                    </div>
+                </div>
+            </Link>
             <div className="w-full mt-6  bg-white mb-2 px-2 py-6 border border-solid border-[#ebecec] flex flex-row items-center justify-between gap-2 rounded-lg">
                 <div className="flex flex-row items-center gap-3 text-lg">
                     <KycIcon className={"w-7 h-7"} />
